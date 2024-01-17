@@ -1,0 +1,5 @@
+{
+    "Sign in": "Đăng nhập",
+    "email_confirm_text": "We was sent an active link to your mail address {{value}}, please check your mail and reset your password before the  reset link has expires",
+    "reset_pass_expired": "The link to reset your password has expired. You can look up your user name and password again. If you already reset your password, sign in.",
+}
