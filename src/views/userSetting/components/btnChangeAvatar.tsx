@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { updateAvatarAPI, uploadPhotoAPI } from "@/api/profile";
 import { ButtonOutline } from "@/components/button";
