@@ -7,7 +7,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { formatNumber } from '../../../../utils/index';
-import { SparkLineChart } from '@mui/x-charts/SparkLineChart';
 import { Avatar, Box, ButtonBase } from '@mui/material';
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from 'react';

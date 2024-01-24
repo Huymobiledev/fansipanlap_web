@@ -12,7 +12,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 
 import '@/styles/swiper.css';
-import { showMediaUp } from "@/hooks/useResponse";
+import { useShowMediaUp } from "@/hooks/useResponse";
 
 const data = [
     {
@@ -49,7 +49,7 @@ const data = [
 export default function Backed(props: any) {
     const { t } = useTranslation()
     
-    const numSlide = showMediaUp('md')? 5: 1
+    const numSlide = useShowMediaUp('md')? 5: 1
 
     return (
         <Fragment>

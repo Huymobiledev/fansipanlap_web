@@ -48,7 +48,7 @@ export default function Nav(props: any) {
             >
                 {
                     dataMenu.map((item, index) => (
-                        <div>
+                        <div key={index}>
                             <Box
                                 sx={{
                                     height: '100%',

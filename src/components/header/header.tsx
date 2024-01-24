@@ -5,11 +5,11 @@ import Nav from "./components/nav";
 import router from 'next/router';
 import { checkUrl } from "@/utils";
 import Link from "next/link";
-import { showMediaUp } from "@/hooks/useResponse";
+import { useShowMediaUp } from "@/hooks/useResponse";
 import LanguageItem from "../footer/languageItem";
 import { MenuIcon } from "../icons/icons";
 import MenuMobile from "./components/menuMobile";
-import { useSpring, animated } from 'react-spring';
+// import { useSpring, animated } from 'react-spring';
 
 export const noHeaderUrl = [
     '/login*',
@@ -134,9 +134,7 @@ useEffect(() => {
                             sx={{
                                 mr: isOnMobile ? 0 : 40
                             }}>
-                            {showMediaUp('md') &&
                                 <Nav isDark={isDark} />
-                            }
                                 <Box
                                         sx={{
                                             display: isBg ? 'flex' : 'none',

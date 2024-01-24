@@ -68,9 +68,9 @@ useEffect(() => {
                     }}
                 >
 
-                    {products.map((item) => (
+                    {products.map((item, index) => (
                         <Box 
-                        
+                        key = {index}
                         sx={{
                             justifyContent: 'center',
                             textAlign: 'center',

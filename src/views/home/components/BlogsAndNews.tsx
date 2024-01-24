@@ -80,7 +80,7 @@ useEffect(() => {
 
         for (let i = 0; i < newsTemplate.length; i += 3) {
             const imagesInGroup = newsTemplate.slice(i, i + 3).map((item, index) => (
-            <Stack direction={'column'} gap={'8px'}>
+            <Stack key={index}direction={'column'} gap={'8px'}>
                 <img
                     key={i + index}
                     src={item.thumbnail}

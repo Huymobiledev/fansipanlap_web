@@ -49,6 +49,7 @@ export default function BreadCrumbs() {
             <Breadcrumbs aria-label="breadcrumb">
                 {crumbs.map((item, index) => (
                     <Box
+                        key={index}
                         sx={{
                             fontSize: 12,
                             color: '#555555',

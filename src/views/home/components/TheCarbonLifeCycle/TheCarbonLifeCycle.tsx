@@ -4,12 +4,12 @@ import { useTranslation } from "react-i18next";
 import { ButtonGreen } from "@/components/button";
 import { ButtonBase, Grid } from "@mui/material";
 import { LifeCycleLeft, LifeCycleRight } from './Item';
-import { showMediaUp } from "@/hooks/useResponse";
+import { useShowMediaUp } from "@/hooks/useResponse";
 import ScrollAnimation from "react-animate-on-scroll";
 
 export default function TheCarbonLifeCycle(props: any) {
     const { t } = useTranslation()
-    const isDesktop = showMediaUp('md')
+    const isDesktop = useShowMediaUp('md')
     const {data} = props
 
     const heading = data?.the_carbon_lifecycle?.name || 'The Carbon Lifecycle'

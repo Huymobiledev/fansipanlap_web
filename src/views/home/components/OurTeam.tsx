@@ -47,7 +47,7 @@ useEffect(() => {
                     
                 }}>
                     {team.map((item, index) => (
-                        <Box sx={{
+                        <Box key={index} sx={{
                             width: isOnMobile ? '300px' : '500px',
                             overflow: 'hidden'
                         }}>

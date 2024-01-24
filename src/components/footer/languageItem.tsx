@@ -22,14 +22,14 @@ useEffect(() => {
     setIsOnMobile(window.innerWidth > 770 ? false : true)
 })
 
-    // useEffect(() => {
-    //     setLang(localStorage.getItem('i18nextLng') || router.locale || 'en')
-    // }, [router.locale])
+    useEffect(() => {
+        setLang(localStorage.getItem('i18nextLng') || router.locale || 'en')
+    }, [router.locale])
 
-    // const changeLanguageHandler = (lang: any) => {
-    //     handleClose()
-    //     i18n.changeLanguage(lang)
-    // }
+    const changeLanguageHandler = (lang: any) => {
+        handleClose()
+        i18n.changeLanguage(lang)
+    }
 
     const handleChangeLang = (event: any) => {
         
@@ -124,7 +124,7 @@ useEffect(() => {
                         minHeight: 100,
                     }}
                 >
-                    {open && appConfig?.languages?.map((item, index) => (
+                    {open && appConfig?.languages?.map((item: any, index: any) => (
                         <Link key={index}
                             href='#'
                             locale={item.code}

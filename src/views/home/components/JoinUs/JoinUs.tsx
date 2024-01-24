@@ -49,7 +49,7 @@ export default function JoinUs(props: any) {
                             }
 
                         }}>
-                            We're growing fast and are looking for more talent to add to our team
+                            We&apos;sre growing fast and are looking for more talent to add to our team
                         </Typography>
 
                         <ButtonBase

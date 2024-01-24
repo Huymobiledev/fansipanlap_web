@@ -26,7 +26,7 @@ import Header from '@/components/header/header';
 
 import lightTheme from '@/styles/theme/lightThemeOptions';
 import Footer from '@/components/footer/footer';
-import { AppConfigGuard } from '@/components/appGuard/appConfigGuard';
+// import { AppConfigGuard } from '@/components/appGuard/appConfigGuard';
 //import i18n from '../../i18n';
 
 require('dotenv').config();
@@ -101,7 +101,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 							<ThemeProvider theme={lightTheme}>
 
 								<CssBaseline />
-								<AppConfigGuard>
+								{/* <AppConfigGuard> */}
 									{/* Header */}
 									<Header />
 									<Box
@@ -120,7 +120,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 									</Box>
 
 									<Footer />
-								</AppConfigGuard>
+								
 							</ThemeProvider>
 						</SnackbarProvider>
 					</PersistGate>

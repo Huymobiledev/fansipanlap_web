@@ -1,7 +1,6 @@
 import { _getAPISSR, baseAPI } from "@/api/commonSSR";
 import { LoadingData } from "@/components/dialog/loadingDialog";
 import ViewNewDetails from "@/views/news/ViewNewDetails";
-import { formatDistanceToNow } from "date-fns";
 import { GetServerSidePropsContext } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
@@ -29,31 +28,40 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     let data = null
     let error = null
     let time = new Date()
-    try {
-        const rs = await _getAPISSR(
-            token,
-            {},
-            `${baseAPI}/article/${slug}`,
-            lang
-        );
-        //console.log(slug, rs);
-        if (rs.success) {
-            data = rs?.data
-        } else {
-            error = rs?.error?.message
-        }
+    // try {
+    //     const rs = await _getAPISSR(
+    //         token,
+    //         {},
+    //         `${baseAPI}/article/${slug}`,
+    //         lang
+    //     );
+    //     //console.log(slug, rs);
+    //     if (rs.success) {
+    //         data = rs?.data
+    //     } else {
+    //         error = rs?.error?.message
+    //     }
 
-    } catch (e) {
-        console.log(e)
-    }finally{
-        console.log('excute time:', new Date().getTime() - time.getTime(), 'ms')
-    }
+    // } catch (e) {
+    //     console.log(e)
+    // }finally{
+    //     console.log('excute time:', new Date().getTime() - time.getTime(), 'ms')
+    // }
 
+    // return {
+    //     props: {
+    //         title: 'CCTPA - News - ' + data?.title,
+    //         description: data?.title || null,
+    //         image: data?.thumb || null,
+    //         data,
+    //         error
+    //     }, // will be passed to the page component as props
+    // }
     return {
         props: {
-            title: 'CCTPA - News - ' + data?.title,
-            description: data?.title || null,
-            image: data?.thumb || null,
+            title: 'CCTPA - News - ',
+            description: null,
+            image: null,
             data,
             error
         }, // will be passed to the page component as props

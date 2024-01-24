@@ -4,7 +4,7 @@ import { Fragment } from "react";
 
 import { useTranslation } from 'react-i18next';
 import { HomeIcon, MarketplaceIcon, MyNftIcon } from "../icons/icons";
-import { shownMediaDown } from "@/hooks/useResponse";
+import { useShowMediaDown } from "@/hooks/useResponse";
 
 const menu = [
     {
@@ -30,7 +30,7 @@ export default function FloatingBarMobile() {
 
     return (
         <Fragment>
-            {shownMediaDown('md') &&
+            {useShowMediaDown('md') &&
                 <Box
                     sx={{
                         position: 'fixed',

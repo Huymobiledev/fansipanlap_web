@@ -206,15 +206,13 @@ export default function ViewVerifyEmailStep(props: any) {
                             py: 3,
                         }}
                     >
-                        <OtpInput
+                        {/* <OtpInput
                             inputStyle="inputStyle"
                             value={code}
                             onChange={setCode}
                             numInputs={6}
-                            renderSeparator={<span></span>}
-                            renderInput={(props) => <input {...props} />}
                             shouldAutoFocus
-                        />
+                        /> */}
                     </Box>
 
                     <div className="note">{t('')}</div>

@@ -10,7 +10,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import '@/styles/swiper.css';
-import { showMediaUp } from "@/hooks/useResponse";
 import { Box, Grid, Stack, useMediaQuery } from "@mui/material";
 import { ButtonOutline } from "@/components/button";
 import Link from "next/link";

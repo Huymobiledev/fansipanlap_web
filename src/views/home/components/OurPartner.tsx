@@ -1,7 +1,6 @@
 import { Box, Container, Typography, Stack } from "@mui/material";
 import { Fragment, useEffect, useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
-import SimpleBar from 'simplebar-react';
 
 
 
@@ -76,6 +75,7 @@ useEffect(() => {
                         }}>
                             {partners.map((item, index) => (
                                 <img src={item} 
+                                    key={index}
                                     style={{
                                         width: isOnMobile ? '125px' : '190px', 
                                         height: isOnMobile ? '50px' : '80px', 

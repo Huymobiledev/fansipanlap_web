@@ -9,7 +9,7 @@ import OurPartner from "./components/OurPartner";
 import OurServices from "./components/OurServices";
 import OurTeam from "./components/OurTeam";
 import ScrollAnimation from "react-animate-on-scroll";
-import { getHomeContentAPI } from "@/api/home";
+// import { getHomeContentAPI } from "@/api/home";
 import { useRouter } from "next/router";
 import BlogAndNews from "./components/BlogsAndNews";
 
@@ -22,29 +22,29 @@ export default function ViewHomePage(props: any) {
     const [error, setError] = useState('');
 
     const getData = async () => {
-        if (pending) {
-            return
-        }
-        try {
-            setPending(true);
+        // if (pending) {
+        //     return
+        // }
+        // try {
+        //     setPending(true);
 
-            const result = await getHomeContentAPI();
-            if (result.success) {
-                setData(result.data);
-            } else {
-                setError(result?.error?.message)
-            }
-        } catch (err: any) {
-            setError(err?.message);
-        } finally {
-            setPending(false);
-        }
+        //     const result = await getHomeContentAPI();
+        //     if (result.success) {
+        //         setData(result.data);
+        //     } else {
+        //         setError(result?.error?.message)
+        //     }
+        // } catch (err: any) {
+        //     setError(err?.message);
+        // } finally {
+        //     setPending(false);
+        // }
     }
 
 
-    useEffect(() => {
-        getData()
-    }, [router.locale])
+    // useEffect(() => {
+    //     getData()
+    // }, [router.locale])
 
     return (
         <Fragment>

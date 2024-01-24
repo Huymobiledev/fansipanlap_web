@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { setBearerToken } from '@/api/axios';
-import { _getAPI } from '@/api/common';
+// import { setBearerToken } from '@/api/axios';
+// import { _getAPI } from '@/api/common';
 import { getProfileAPI } from '@/api/profile';
 import { RootState } from '@/hooks/store';
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
@@ -90,7 +90,7 @@ export const logout = createAsyncThunk('user/logout', async (_arg, thunkApi) => 
     try {
         //console.log('arg logout',_arg);
         localStorage.removeItem('user')
-        setBearerToken(null)
+        // setBearerToken(null)
         return true
     } catch (e) {
         console.log('error login', e)
@@ -181,7 +181,7 @@ export const userSlice = createSlice({
                 saveSession(payload)
                 state.isLoading = false;
                 state.isError = false;
-                setBearerToken(payload.token)
+                // setBearerToken(payload.token)
                 state.isLoggedIn = true;
             } else {
                 state.isLoading = false
@@ -231,7 +231,7 @@ export const userSlice = createSlice({
             state.user = payload
             saveSession(payload)
             state.isLoading = false;
-            setBearerToken(payload.token)
+            // setBearerToken(payload.token)
             state.isLoggedIn = true;
             state.error = undefined
         })

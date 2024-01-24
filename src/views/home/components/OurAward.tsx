@@ -45,7 +45,7 @@ useEffect(() => {
                             fontSize: '40px',
 
                         }}>
-                            We've been building many products with <b>million-user</b> scales
+                            We&apos;sve been building many products with <b>million-user</b> scales
                         </Typography>
                         <Stack direction={isOnMobile ? 'column-reverse' : 'row'} gap={isOnMobile ? 2 : 5}>
                             <Box sx={{width: isOnMobile ? '100%' : '50%'}}>
