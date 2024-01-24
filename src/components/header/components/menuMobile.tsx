@@ -6,31 +6,23 @@ import { BulletIcon, CloseIcon } from "@/components/icons/icons";
 import router from 'next/router';
 import { useTranslation } from "react-i18next";
 
+
 export default function MenuMobile(props: any) {
     const { onClose } = props
     const {t} = useTranslation()
 
     return (
         <Fragment>
-            <Stack direction='row' alignItems='center' spacing={1} justifyContent='space-between'>
-                <Typography
-                    sx={{
-                        fontSize: 24,
-                        fontWeight: 700,
-                    }}
-                >
-                    CCTPA
-                </Typography>
-                <IconButton id='menu' onClick={onClose} aria-label="Menu" >
-                    <CloseIcon />
-                </IconButton>
-            </Stack>
             <Stack spacing={2} pt={4}
                 sx={{
+                    position: 'absolute',
+                    zIndex: 1000,
+                    right: 0,
+                    bottom: 0,
                     '.item': {
                         fontSize: 12,
                         fontWeight: 600,
-                        textTransform: 'uppercase'
+                        textTransform: 'uppercase',
                     }
                 }}
             >

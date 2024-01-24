@@ -7,7 +7,7 @@ import OurStory from "./components/OurStory";
 import CoreValues from "./components/CoreValues";
 import OurCommunity from "./components/OurCommunity";
 import Experts from "./components/Experts";
-import JoinUs from "../home/components/JoinUs/JoinUs";
+import JoinUs from "../home/components/OurPartner";
 import { useRouter } from "next/router";
 import { getAboutContentAPI } from "@/api/home";
 

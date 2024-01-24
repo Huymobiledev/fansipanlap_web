@@ -12,48 +12,64 @@ import router from 'next/router';
 
 const CustomButton = styled(Button)({
     color: 'white',
-    border: '1px solid white',
     borderRadius: '59px',
     padding: '0px 30px',
-    textTransform: 'uppercase',
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
-    backdropFilter: 'blur(1px)',
+    backgroundColor: '#FB471E',
     height: '50px',
     fontSize: '12px',
     fontWeight: 600,
     gap: '10px',
     whiteSpace: 'nowrap',
     display: 'flex',
+    transition: 'transform 0.3s ease-in-out',
+
+
     '&:hover': {
-        backgroundColor: '#A7FAD2',
-        color: '#071F06',
-        borderColor: '#A7FAD2'
+        transform: 'scale(1.5)',
+        backgroundColor: '#FB471E'
     },
     '& .MuiButton-endIcon': {
         margin: 0,
     },
-
+        boxShadow: '0px 5px 10px 0px #FFFFFF33 inset',
+    '&:active': {
+        boxShadow: '0px 1px 1px 0px #FFFFFF80 inset',
+    },
+    '&:focus': {
+        boxShadow: '0px 5px 5px 0px #0000001A',
+    }
 });
+
 
 
 export default function Welcome(props: any) {
 
     const [data, setData] = useState<any>(undefined)
     const {appConfig} = useAppSelector(appConfigSelector)
-
+    
+    
+    const [isOnMobile, setIsOnMobile] = useState<boolean>(false)
     useEffect(() => {
-        if(appConfig && router.locale){
-            setData(appConfig.home_contents[router.locale || ''])
-        }
-    }, [router.locale, appConfig])
+        setIsOnMobile(window.innerWidth > 770 ? false : true)
+    })
 
-    const heading = data?.top?.heading || 'Financing the Future of Carbon Solutions'
-    const intro = data?.top?.intro || 'OFFERING PIONEERING PROJECT FINANCE AND TECHNOLOGY, PROJECT DEVELOPMENT AND CREDIT PORTFOLIO SERVICES'
+    // useEffect(() => {
+    //     if(appConfig && router.locale){
+    //         setData(appConfig.home_contents[router.locale || ''])
+    //     }
+    // }, [router.locale, appConfig])
+
+    const heading = data?.top?.heading || 'WEB3'
+    // const intro = data?.top?.intro || 'We help to build and operate web3 projects for enterprises'
+    const intro = 'We help to build and operate web3 projects for enterprises'
+
     const btnLink = {
         carbon_credit: data?.top?.carbon_credit || '#',
         contact_advisory: data?.top?.contact_advisory || '#',
         register_tranding: data?.top?.register_tranding || '#'
     }
+
+
 
     return (
         <Fragment>
@@ -66,68 +82,97 @@ export default function Welcome(props: any) {
                     minHeight: '100vh',
                 }}
             >
-                <Container maxWidth='xxl' sx={{
+                <Container
+                    sx={{
                     color: 'white',
-                    width: '100%',
                     minHeight: '100vh',
-                    height: '100%',
-                    display: 'flex',
-                    alignItems: {
-                        xs: 'center',
-                        md: 'flex-end',
-                    },
-                    p: [0, 0, 10, 10, 10]
+                    display:'flex',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    width: '100%'
                 }}
                 >
-                    <Stack spacing={2} sx={{
-                        maxWidth: 768,
+                    <Stack sx={{
+                        width: '100%',
+                        display: 'flex',
+                        flexGrow: 1,
                         height: '100%',
+                        maxHeight: '150%',
                         pb: 5,
                         textAlign: {
                             xs: 'center',
-                            md: 'left'
                         },
                         px: {
                             md: 0,
-                            xs: 2,
                         }
                     }}>
-                            <Typography variant="h1" sx={{
-                                fontSize: [38, 38, 56, 56, 56],
-                                fontWeight: [500, 500, 400, 400, 400]
-                            }}>
-                                {heading}
-                            </Typography>
-                        <Typography variant="subtitle1" sx={{ fontSize: '14px', fontWeight: 500 , textTransform: 'uppercase'}}>
-                            {intro}
+                        <Typography variant="h1" sx={{
+                            display:'block',
+                            font: 'Inter',
+                            fontSize: isOnMobile ? '18px' : '38px',
+                            fontWeight: isOnMobile ? '700' : 600,
+                            lineHeight: isOnMobile ? '20px' : '58px',
+                            textAlign: 'center',
+                            color: '#595959',
+                            letterSpacing: 2,
+                            mb: 2,
+                            textShadow: isOnMobile ? '2px 2px 4px #00000033' : 'none'
+                        }}>
+                            WEB3
+                            <br/>
+                            TECHONOLOGY
                         </Typography>
+                        <Typography
+                        variant="h1"
+                        sx={{
+                            display:'block',
+                            width: '100%',
+                            font: 'Inter',
+                            fontSize: isOnMobile ? '90px' : '120px',
+                            fontWeight: '1000',
+                            textAlign: 'center',
+                            color: 'black',
+                            lineHeight: isOnMobile ? '70px' : '120px',
+                            letterSpacing: 0
+                        }}>
+                            MAKE EASY
+                        </Typography>
+                        
+                        <Typography 
+                            variant="subtitle1" 
+                            sx={{
+                                display:'block',
+                                width: '100%',
+                                font: 'Inter',
+                                fontSize: isOnMobile ? '10px' : '20px',
+                                fontWeight: '600',
+                                lineHeight: '19px',
+                                letterSpacing: '0em',
+                                textAlign: 'center',
+                                color:'#363636',
+                                mt: '10px'
+                            }}>
+
+                            We help to build and {isOnMobile && <br></br>} operate web3 projects for enterprises
+                        </Typography>
+                        
+                        
+                        
                         <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
-                            <Grid container sx={{ paddingTop: 1 }}>
-                                <Grid item xs={12} md={4}
-                                    sx={{
-                                        pl: {
-                                            md: 0,
-                                            xs: 1,
-                                        },
-                                        pr: 1,
-                                        py: 1
-                                    }}
+                            <Box sx={{
+                                width: '100%',
+                                textAlign: 'center',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                mt: 3.5
+                            }}>
+                                <CustomButton
+                                // onClick={}
                                 >
-                                    <CustomButton endIcon={<ArrowForwardIosIcon />} fullWidth
-                                        onClick={() => router.push(btnLink.contact_advisory)}
-                                    >Contact Advisory</CustomButton>
-                                </Grid>
-                                <Grid item xs={12} md={4} p={1}>
-                                    <CustomButton endIcon={<ArrowForwardIosIcon />} fullWidth
-                                        onClick={() => router.push(btnLink.carbon_credit)}
-                                    >List Carbon Credit</CustomButton>
-                                </Grid>
-                                <Grid item xs={12} md={4} p={1}>
-                                    <CustomButton endIcon={<ArrowForwardIosIcon />} fullWidth 
-                                        onClick={() => router.push(btnLink.register_tranding)}
-                                    >Register for Tranding</CustomButton>
-                                </Grid>
-                            </Grid>
+                                    Download Portfolio
+                                </CustomButton>
+                            </Box>
                         </ScrollAnimation>
                     </Stack>
                 </Container>

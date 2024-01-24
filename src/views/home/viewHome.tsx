@@ -1,18 +1,17 @@
 import { Stack } from "@mui/material";
 import { Fragment, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import PopularTradingCredits from "./components/PopularTradingCredits/PopularTradingCredits";
+import OurAward from "./components/OurAward";
 import Welcome from "./components/Welcome";
-import Intro from "./components/Intro";
-import TheCarbonLifeCycle from "./components/TheCarbonLifeCycle/TheCarbonLifeCycle";
-import GetToKnowRealcoin from "./components/GetToKnowRealcoin/GetToKnowRealcoin";
+import OurProducts from "./components/OurProducts";
 import Backed from "./components/Backed/Backer";
-import JoinUs from "./components/JoinUs/JoinUs";
-import Services from "./components/Services/Services";
-import About from "./components/About";
+import OurPartner from "./components/OurPartner";
+import OurServices from "./components/OurServices";
+import OurTeam from "./components/OurTeam";
 import ScrollAnimation from "react-animate-on-scroll";
 import { getHomeContentAPI } from "@/api/home";
 import { useRouter } from "next/router";
+import BlogAndNews from "./components/BlogsAndNews";
 
 
 export default function ViewHomePage(props: any) {
@@ -49,17 +48,14 @@ export default function ViewHomePage(props: any) {
 
     return (
         <Fragment>
-            <Stack direction={'column'} width={'100%'} alignItems={'center'} spacing={20}>
-                <Welcome />
-                <Intro data={data}/>
-                <Services data={data} />
-                <About data={data} />
-                <PopularTradingCredits />
-                <TheCarbonLifeCycle data={data}/>
-                <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
-                    <GetToKnowRealcoin />
-                </ScrollAnimation>
-                <JoinUs />
+            <Stack direction={'column'} gap={5} width={'100%'} alignItems={'center'} sx={{display: 'flex', position:'relative', backgroundColor: '#fff'}}>
+                <Welcome/>
+                <OurProducts data={data}/>
+                <OurServices data={data}/>
+                <OurTeam data={data} />
+                <OurAward/>
+                <OurPartner/>
+                <BlogAndNews/>
             </Stack>
         </Fragment>
     )

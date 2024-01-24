@@ -1,6 +1,7 @@
 import * as React from 'react';
 import type { AppProps } from 'next/app';
-import { Box, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import { Box, CssBaseline} from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/system'
 
 import '@/styles/globals.css';
 import "@/styles/nprogress.css";
@@ -14,7 +15,7 @@ import { useRouter } from 'next/router';
 import { PersistGate } from 'redux-persist/integration/react'
 
 // import i18n (needs to be bundled ;)) 
-import '../../i18n';
+// import '../../i18n';
 
 import { Suspense, useEffect } from 'react';
 import NProgress from 'nprogress';
@@ -23,7 +24,7 @@ import { CookiesProvider } from 'react-cookie';
 import configureStore, { persistor } from '@/hooks/store';
 import Header from '@/components/header/header';
 
-import lightThemeOptions from '@/styles/theme/lightThemeOptions';
+import lightTheme from '@/styles/theme/lightThemeOptions';
 import Footer from '@/components/footer/footer';
 import { AppConfigGuard } from '@/components/appGuard/appConfigGuard';
 //import i18n from '../../i18n';
@@ -31,8 +32,6 @@ import { AppConfigGuard } from '@/components/appGuard/appConfigGuard';
 require('dotenv').config();
 
 NProgress.configure({ showSpinner: false })
-
-const lightTheme = createTheme(lightThemeOptions)
 
 interface SeoInterface {
 	title: string,
@@ -61,13 +60,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
 	}
 
-	useEffect(() => {
+	// useEffect(() => {
 
-		router.events.on('routeChangeStart', () => NProgress.start());
-		router.events.on('routeChangeComplete', () => NProgress.done());
-		router.events.on('routeChangeError', () => NProgress.done());
+	// 	router.events.on('routeChangeStart', () => NProgress.start());
+	// 	router.events.on('routeChangeComplete', () => NProgress.done());
+	// 	router.events.on('routeChangeError', () => NProgress.done());
 
-	}, []);
+	// }, []);
 
 	return (
 		<Suspense fallback={''}>

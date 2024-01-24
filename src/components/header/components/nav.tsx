@@ -6,19 +6,27 @@ import { useTranslation } from "react-i18next";
 
 export const dataMenu = [
     {
-        lable: 'Home',
+        lable: 'Product',
         link: '/'
     },
     {
-        lable: 'About Us',
+        lable: 'Services',
         link: '/about-us'
     },
     {
-        lable: 'Services',
+        lable: 'Team',
         link: '/services'
     },
     {
-        lable: 'News',
+        lable: 'Awards',
+        link: '/news'
+    },
+    {
+        lable: 'Partners',
+        link: '/news'
+    },
+    {
+        lable: 'Blogs & News',
         link: '/news'
     },
 
@@ -30,38 +38,46 @@ export default function Nav(props: any) {
 
     return (
         <Fragment>
-            <Stack direction='row' alignItems='center'
+            <Stack direction='row' alignItems='center' id='a'
                 sx={{
-                    gap: [2, 2, 2, 5, 5],
+                    gap: 3,
                     height: '100%',
                     overflow: 'hidden',
+                    px: 5
                 }}
             >
                 {
                     dataMenu.map((item, index) => (
-                        <Box
-                            sx={{
-                                height: '100%',
-                                display: 'flex',
-                                alignItems: 'center',
-                            }}
-                        >
-                            <Link href={item.link}>
-                                <Typography noWrap
-                                    sx={{
-                                        fontSize: [12, 12, 14, 14, 14],
-                                        fontWeight: 600,
-                                        color: router.pathname === item.link ? '#0BD172' : isDark? '#000':'#fff',
-                                        ':hover': {
-                                            color: '#0BD172'
-                                        },
-                                        textTransform: 'uppercase'
-                                    }}
-                                >
-                                    {t(item.lable)}
-                                </Typography>
-                            </Link>
-                        </Box>
+                        <div>
+                            <Box
+                                sx={{
+                                    height: '100%',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    transition: 'transform 0.3s ease-in-out',
+                                    ':hover': {
+                                                transform: 'scale(1.5)'
+                                            },
+                                }}
+                            >
+                                <Link href={item.link}>
+                                    <Typography noWrap
+                                        sx={{
+                                            fontSize: 8,
+                                            fontWeight: 600,
+                                            color: '#ffffff',
+                                            
+                                            textTransform: 'uppercase',
+                                            textAlign: 'right',
+                                        }}
+                                    >
+                                        {t(item.lable)}
+                                    </Typography>
+                                </Link>
+                            </Box>
+                        </div>
+                        
+                        
                     ))
                 }
             </Stack>
