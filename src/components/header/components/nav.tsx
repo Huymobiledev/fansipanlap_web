@@ -63,11 +63,9 @@ export default function Nav(props: any) {
                                 <Link href={item.link}>
                                     <Typography noWrap
                                         sx={{
-                                            fontSize: 8,
-                                            fontWeight: 600,
+                                            fontSize: '14px',
                                             color: '#ffffff',
                                             
-                                            textTransform: 'uppercase',
                                             textAlign: 'right',
                                         }}
                                     >
