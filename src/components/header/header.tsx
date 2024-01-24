@@ -134,7 +134,7 @@ useEffect(() => {
                             sx={{
                                 mr: isOnMobile ? 0 : 40
                             }}>
-                                <Nav isDark={isDark} />
+                            {!isOnMobile && <Nav isDark={isDark} />}
                                 <Box
                                         sx={{
                                             display: isBg ? 'flex' : 'none',
