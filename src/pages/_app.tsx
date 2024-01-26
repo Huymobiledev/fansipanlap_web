@@ -100,7 +100,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 						>
 							<ThemeProvider theme={lightTheme}>
 
-								<CssBaseline />
+								<CssBaseline/>
 								{/* <AppConfigGuard> */}
 									{/* Header */}
 									<Header />
@@ -119,7 +119,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 										<Component {...pageProps} />
 									</Box>
 
-									<Footer />
+									<Footer/>
 								
 							</ThemeProvider>
 						</SnackbarProvider>

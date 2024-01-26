@@ -29,10 +29,14 @@ const BulletSvgIcon = () => (
 export default function Footer() {
     const { t } = useTranslation()
     const [isOnMobile, setIsOnMobile] = useState<boolean>(false)
+    const [is4K, setIs4K] = useState<boolean>(false)
 
 useEffect(() => {
-    setIsOnMobile(window.innerWidth > 770 ? false : true)
-})
+    setIsOnMobile(window.innerWidth < 600 ? false : true)
+    setIs4K(window.innerWidth > 2560)
+},[window.innerWidth])
+
+
 
     const DrawLine = () => {
         const hrStyle: CSSProperties = {
@@ -54,10 +58,13 @@ useEffect(() => {
     }
 
     return (
-        <Container maxWidth='xxl'
+        <Container maxWidth={'100%'}
                 sx={{
-                    color: COLOR.White,
+                    width: '100%',
+                    color: 'white',
                     backgroundColor: '#FB471E',
+                    justifyContent: 'center',
+                    alignItems: 'center'
                 }}
             >
                     {/* <Stack direction='column' width='100%' gap={3} alignItems={'center'}>
@@ -147,7 +154,7 @@ useEffect(() => {
                             <hr></hr>
                         </Stack>
                     </Stack> */}
-                <Grid container spacing={2}>
+                <Grid container spacing={2} sx={{alignItems: 'center', justifyContent: 'center', px: is4K ? '20vw' : ''}}>
                     <Grid item xs={12} md={12}>
                         <Box 
                             sx = {{
@@ -166,6 +173,7 @@ useEffect(() => {
                     </Grid>
                     <Grid item xs={12} md={12} my={5}>
                         <Grid container spacing={2} sx={{
+                    
                         }}>
                             <Grid item md={2.2} xs={12}>
                                 <Typography variant='body2'

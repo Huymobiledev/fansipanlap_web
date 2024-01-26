@@ -22,6 +22,7 @@ const CustomButton = styled(Button)({
         color: '#FFFFFF',
         borderColor: '#071F06'
     }
+
 });
 
 const initData = [
@@ -61,60 +62,60 @@ const initData = [
 export default function OurServices(props: any) {
     const {data} = props
     const [isOnMobile, setIsOnMobile] = React.useState<boolean>(false)
+    const [is4K, setIs4K] = React.useState<boolean>(false)
 
 React.useEffect(() => {
-    setIsOnMobile(window.innerWidth > 770 ? false : true)
-})
+    setIsOnMobile(window.innerWidth < 600 ? true : false)
+    setIs4K(window.innerWidth > 2560)
+},[window.innerWidth])
     return (
         <Container
+            maxWidth={'lg'}
             sx={{
-                width: '100%',
+                width: '75vw',
                 textAlign: 'center',
                 py: '50px',
                 borderRadius: 3,
-                // backgroundColor: '#fafafa',
+                px: '0',
+                mx: '0'
                 
                 
         }}>
+            <Stack direction={'column'} gap={5}>
                 <Typography variant="h2" sx={{
                     fontSize: isOnMobile ? '36px' : '48px',
-                    fontWeight: 600,
+                    fontWeight: 700,
                     'span:first-child':{
                         color: '#363636'
                     },
                     'span:last-child':{
                         color: '#FB471E'
                     }
+                    
                 }}>
                     <span>Our </span>
                     {isOnMobile && <br/>}
-
                     <span>Services</span>
                 </Typography>
-            <Box
-                sx={{
-                    width: '100%',
-                    maxWidth: '100%',
-                    py: '60px'
-                }}
-            >
-                <Grid container spacing={3}>
+                <Grid container spacing={3} sx={{justifyContent:'center'}}>
                     {initData.map((item, index) => (
-                        <Grid item lg={4} key={index}
+                        <Grid item xs={15} sm={5} md={4} key={index}
                             sx={{
+        
                             }}
                         >
                             <ScrollAnimation animateIn='fadeIn'
-                                animateOut='fadeOut' delay={index * 200} animateOnce={true}>
-                                <Stack direction={'column'} spacing={isOnMobile ? 5 : 3}
+                                animateOut='fadeOut' delay={index * 150} animateOnce={true}>
+                                <Stack direction={'column'} gap={3}
                                     sx={{
                                         alignItems: 'center',
-                                        boxShadow: '1px 1px 2px 0px rgba(0,0,0,.2)',
+                                        boxShadow: '0px 5px 5px 0px #0000000D',
                                         borderRadius: '20px',
-                                        padding: '50px',
-                                        backgroundColor: '#fff'
+                                        backgroundColor: '#fff',
+                                        padding: isOnMobile ? '30px' : '50px',
+                                        width: isOnMobile ? '90vw' : 1
                                     }}>
-                                    <img src={"/assets/icons/" + item.icon} alt="" style={{ height: '110px'}} />
+                                    <img src={"/assets/icons/" + item.icon} alt="" style={{ height: '50px'}} />
                                     <Typography variant="h3"
                                         sx={{
                                             fontSize: isOnMobile ? '20px' : '24px',
@@ -122,11 +123,13 @@ React.useEffect(() => {
                                             textAlign: 'center',
                                             height: '58px',
                                             verticalAlign: 'top',
-                                        }}
+                                            lineHeight: '25px'
+                                        }}  
                                     >
                                         {item.title}
                                     </Typography>
                                     <Typography
+                                        variant="body2"
                                         sx={{
                                             width: '100%',
                                             color: '#343434',
@@ -135,8 +138,10 @@ React.useEffect(() => {
                                             display: '-webkit-box',
                                             overflow: 'hidden',
                                             WebkitBoxOrient: 'vertical',
-                                            WebkitLineClamp: 4,
+                                            WebkitLineClamp: 2,
                                             textOverflow: 'ellipsis',
+                                            lineHeight: '19.36px',
+                                            mb: '30px'
                                         }}
                                     >
                                         {item.description}
@@ -147,8 +152,8 @@ React.useEffect(() => {
                         </Grid>
                     ))}
                 </Grid>
-
-            </Box>
+            </Stack>
+                
         </Container>
 
     );

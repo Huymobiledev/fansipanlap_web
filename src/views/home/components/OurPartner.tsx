@@ -30,7 +30,6 @@ useEffect(() => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '30px',
             backgroundColor: '#fff',
             mb: '20px',
             
@@ -40,6 +39,7 @@ useEffect(() => {
                 <Typography variant="h2" sx={{
                     fontSize: isOnMobile ? '36px' : '48px',
                     fontWeight: 600,
+                    mb: 2,
                     'span:first-child':{
                         color: '#363636'
                     },
