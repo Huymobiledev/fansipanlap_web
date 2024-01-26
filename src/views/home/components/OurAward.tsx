@@ -3,7 +3,7 @@ import { Fragment, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ButtonGreen } from "@/components/button";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Typography } from "@mui/material";
+import { Typography, Grid } from "@mui/material";
 
 export default function OurAward(props: any) {
     const { t } = useTranslation()
@@ -12,8 +12,118 @@ export default function OurAward(props: any) {
     const [isOnMobile, setIsOnMobile] = useState<boolean>(false)
 
 useEffect(() => {
-    setIsOnMobile(window.innerWidth > 770 ? false : true)
+    setIsOnMobile(window.innerWidth < 600)
 })
+
+    const Award1 = () => {
+        return (
+                <Grid item xs={12} md={6} mb={'50px'}>
+                    <Stack direction={'column'} gap={'5px'} >
+                        <Box 
+                            sx={{
+                                display: 'flex', 
+                                alignItems: 'center',
+                                width: '100%'
+                            }}>
+                            <img 
+                                src='/assets/images/pngegg 1.png' 
+                                style={{
+                                    width: '25%', 
+                                    display:'inline', 
+                                    position:'relative'
+                                }}/>
+
+                            <Typography 
+                                sx={{
+                                    fontSize: isOnMobile ? '14px' : '16px',
+                                    display: 'inline', 
+                                    position:'relative',
+                                    flex: 1,
+                                    textAlign: 'left',
+                                    ml: '20px'
+                                }}>
+                                <b>SingSing</b> is the winner of <b>Community-2-Blockchanin Hackathon</b> Vietnam 2021
+                            </Typography>
+                        </Box>
+                        <Box 
+                            sx={{
+                                height: '2px', 
+                                width: '100%',
+                                background: 'linear-gradient(270deg, rgba(241, 96, 36, 0) -0.09%, #F16024 49.41%, rgba(241, 96, 36, 0) 99.91%)'
+                        
+                        }}></Box>
+                        <Box 
+                            sx={{
+                                display: 'flex', 
+                                alignItems: 'center',
+                                width: '100%'
+                            }}>
+                            <img 
+                                src='/assets/images/pngegg 1.png' 
+                                style={{
+                                    width: '25%', 
+                                    display:'inline', 
+                                    position:'relative'
+                                }}/>
+
+                            <Typography 
+                                sx={{
+                                    fontSize: isOnMobile ? '14px' : '16px',
+                                    display: 'inline', 
+                                    position:'relative',
+                                    flex: 1,
+                                    textAlign: 'left',
+                                    ml: '20px'
+                                }}>
+                                <b>2 National Cups</b> for software development <b>ASIA-PACIFIC ICT champion cup (APICTA)</b>
+                            </Typography>
+                        </Box>
+                    </Stack>
+            </Grid>
+        )
+    }
+
+    const Award2 = () => {
+        return (
+            <Grid item xs={12} md={6} mb={'50px'}>
+                <Grid container>
+                    <Grid item xs={6}>
+                        <img style={{
+                            width: isOnMobile ? '176px' : '300px', 
+                            height: isOnMobile ? '168px' : '300px'}} 
+                            src='/assets/images/Picture9-very_compressed-scale-4_00x 1.png'/>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <img style={{
+                            width: isOnMobile ? '39px' : '70px', 
+                            height: isOnMobile ? '132px' : '236px'}} 
+                            src='/assets/images/apicta_award_home-89x300 1.png'/>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <img style={{
+                            width: isOnMobile ? '39px' : '70px', 
+                            height: isOnMobile ? '132px' : '236px'}} 
+                            src='/assets/images/apicta_award_home-89x300 1.png'/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        )
+    }
+
+    const Award = () => {
+        return !isOnMobile ? (
+                <Grid container justifyContent={'space-between'} alignItems={'center'}>
+                    <Award1/>
+                    <Award2/>
+                </Grid>
+            ) : (
+                <Grid container justifyContent={'space-between'} alignItems={'center'}>
+                    <Award2/>
+                    <Award1/>
+                </Grid>
+            )
+        
+    }
 
     return (
         <Fragment>
@@ -45,92 +155,13 @@ useEffect(() => {
                             fontSize: '40px',
 
                         }}>
-                            We&apos;sve been building many products with <b>million-user</b> scales
+                            We&apos;ve been building many products with <b>million-user</b> scales
                         </Typography>
                         <Stack direction={isOnMobile ? 'column-reverse' : 'row'} gap={isOnMobile ? 2 : 5}>
-                            <Box sx={{width: isOnMobile ? '100%' : '50%'}}>
-                                <Stack direction={'column'} gap={'5px'} >
-                                    <Box 
-                                        sx={{
-                                            display: 'flex', 
-                                            alignItems: 'center',
-                                            width: '100%'
-                                        }}>
-                                        <img 
-                                            src='/assets/images/pngegg 1.png' 
-                                            style={{
-                                                width: '25%', 
-                                                display:'inline', 
-                                                position:'relative'
-                                            }}/>
-
-                                        <Typography 
-                                            sx={{
-                                                fontSize: isOnMobile ? '14px' : '16px',
-                                                display: 'inline', 
-                                                position:'relative',
-                                                flex: 1,
-                                                textAlign: 'left',
-                                                ml: '20px'
-                                            }}>
-                                            <b>SingSing</b> is the winner of <b>Community-2-Blockchanin Hackathon</b> Vietnam 2021
-                                        </Typography>
-                                    </Box>
-                                    <Box 
-                                        sx={{
-                                            height: '2px', 
-                                            width: '100%',
-                                            background: 'linear-gradient(270deg, rgba(241, 96, 36, 0) -0.09%, #F16024 49.41%, rgba(241, 96, 36, 0) 99.91%)'
-                                    
-                                    }}></Box>
-                                    <Box 
-                                        sx={{
-                                            display: 'flex', 
-                                            alignItems: 'center',
-                                            width: '100%'
-                                        }}>
-                                        <img 
-                                            src='/assets/images/pngegg 1.png' 
-                                            style={{
-                                                width: '25%', 
-                                                display:'inline', 
-                                                position:'relative'
-                                            }}/>
-
-                                        <Typography 
-                                            sx={{
-                                                fontSize: isOnMobile ? '14px' : '16px',
-                                                display: 'inline', 
-                                                position:'relative',
-                                                flex: 1,
-                                                textAlign: 'left',
-                                                ml: '20px'
-                                            }}>
-                                            <b>2 National Cups</b> for software development <b>ASIA-PACIFIC ICT champion cup (APICTA)</b>
-                                        </Typography>
-                                    </Box>
-                                </Stack>
-                            </Box>
-                            <Box>
-                                <Stack direction={'row'} gap={isOnMobile ? 1 : 11} sx={{
-                                    alignItems: 'center'
-                                }}>
-                                    <img style={{
-                                        width: isOnMobile ? '176px' : '300px', 
-                                        height: isOnMobile ? '168px' : '300px'}} 
-                                        src='/assets/images/Picture9-very_compressed-scale-4_00x 1.png'/>
-                                    <img style={{
-                                        width: isOnMobile ? '39px' : '70px', 
-                                        height: isOnMobile ? '132px' : '236px'}} 
-                                        src='/assets/images/apicta_award_home-89x300 1.png'/>
-                                    <img style={{
-                                        width: isOnMobile ? '39px' : '70px', 
-                                        height: isOnMobile ? '132px' : '236px'}} 
-                                        src='/assets/images/apicta_award_home-89x300 1.png'/>
-                                </Stack>
-                            </Box>
+                            
                         </Stack>
                     </Stack>
+                    <Award/>
                     
                 </ScrollAnimation>
             </Container>

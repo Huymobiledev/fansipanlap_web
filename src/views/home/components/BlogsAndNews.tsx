@@ -63,13 +63,13 @@ useEffect(() => {
         return (
             <Grid container justifyContent={'space-between'} alignItems={'center'}>
                 {newsTemplate.slice(page, page + 3).map((item, index) => (
-                    <Grid key={index} item xs={12} sm={3} m='auto' >
+                    <Grid key={index} item xs={12} sm={3} m='auto' mb={2}>
                         <Stack key={index} direction={'column'} gap={'8px'}>
                             <img
                                 key={index}
                                 src={item.thumbnail}
                                 style={{
-                                width: isOnMobile ? '90vw' : '375px',
+                                width: isOnMobile ? '90vw' : '100%',
                                 objectFit: 'contain',
                                 borderRadius: '10px',
                                 marginBottom: '10px'
@@ -115,11 +115,10 @@ useEffect(() => {
 
     return (
         <Container 
-            maxWidth={'lg'}    
+            maxWidth={'xxl'}    
         sx={{
             textAlign: 'center',
             display: 'flex',
-            flexDirection: 'column',
             alignItems: 'center',
             backgroundColor: '#fff',
             mb: '20px',
@@ -142,7 +141,6 @@ useEffect(() => {
                         <span>Blog & </span>
                         {isOnMobile && <br/>}
                         <span>News</span>
-
                 </Typography>
                 <BlogAndNewsPage/>
                 
