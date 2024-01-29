@@ -182,7 +182,7 @@ useEffect(() => {
                                             fontSize: '14px'
                                     }}
                                 >
-                                    District 7 - HCMC
+                                    219 Khanh Hoi, District 4, HCMC
                                 </Typography>
                             </Grid>
                             <Grid item md={.25} xs={12}>

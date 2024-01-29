@@ -211,7 +211,7 @@ useEffect(() => {
                                 mt: 3.5
                             }}>
                                 <CustomButton
-                                // onClick={}
+                                onClick={() => router.push('https://docsend.com/view/xxxxcsr6c42yxscp')}
                                 >
                                     Download portfolio
                                 </CustomButton>
