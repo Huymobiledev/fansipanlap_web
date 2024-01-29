@@ -95,7 +95,7 @@ useEffect(() => {
                 }}
                 >
                     <Stack sx={{
-                        width: '100%',
+                        width: '80vw',
                         display: 'flex',
                         flexGrow: 1,
                         height: '100%',
@@ -113,7 +113,7 @@ useEffect(() => {
                             display:'block',
                             font: 'Inter',
                             fontSize: `calc(${1}vw + 20px)`,
-                            fontWeight: isOnMobile ? '700' : 600,
+                            fontWeight: 600,
                             lineHeight: 1,
                             textAlign: 'center',
                             color: '#595959',
@@ -152,36 +152,19 @@ useEffect(() => {
                         <Typography 
                             variant="subtitle1" 
                             sx={{
-                                display:'inline-block',
-                                width: '100%',
+                                width: '80%',
                                 font: 'Inter',
-                                fontSize: isOnMobile ? '10px' : '20px',
+                                fontSize: 'calc(.5vw + 9px)',
                                 fontWeight: '600',
                                 lineHeight: '19px',
                                 letterSpacing: '0em',
                                 textAlign: 'center',
                                 color:'#363636',
-                                mt: '10px'
+                                mt: '10px',
+                                mx: 'auto'
                             }}>
 
-                            We help to build and
-                        </Typography>
-                        <Typography 
-                            variant="subtitle1" 
-                            sx={{
-                                display:'inline-block',
-                                width: '100%',
-                                font: 'Inter',
-                                fontSize: isOnMobile ? '10px' : '20px',
-                                fontWeight: '600',
-                                lineHeight: '19px',
-                                letterSpacing: '0em',
-                                textAlign: 'center',
-                                color:'#363636',
-                                mt: '10px'
-                            }}>
-
-                            operate web3 projects for enterprises
+                            We help to build and operate web3 projects for enterprises
                         </Typography>
                             <Box sx={{
                                 width: '100%',

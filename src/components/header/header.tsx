@@ -136,30 +136,28 @@ useEffect(() => {
                             }}>
                             {!isOnMobile && <Nav isDark={isDark} />}
                                 <Box
-                                        sx={{
-                                            display: isBg ? 'flex' : 'none',
-                                            position: 'fixed',
-                                            background: '#FB471E',
-                                            boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.25)',
-                                            borderRadius: '50%',
-                                            width: 36,
-                                            height: 36,
-                                            textAlign: 'center',
-                                            justifyContent: 'center',
-                                            bottom: 10,
-                                            right: 10,
-                                            ':hover': {
-                                                background: '#fc7353'
-                                            },
-                                            'img' : {
-                                                width: 16,
-                                                height: 11,
-                                                m: 'auto'
-                                            }
-                                            
-
-                                        }}
-                                        onClick={scrollToTop}
+                                    sx={{
+                                        display: isBg ? 'flex' : 'none',
+                                        position: 'fixed',
+                                        background: '#FB471E',
+                                        boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.25)',
+                                        borderRadius: '50%',
+                                        width: 36,
+                                        height: 36,
+                                        textAlign: 'center',
+                                        justifyContent: 'center',
+                                        bottom: 10,
+                                        right: 10,
+                                        ':hover': {
+                                            background: '#fc7353'
+                                        },
+                                        'img' : {
+                                            width: 16,
+                                            height: 11,
+                                            m: 'auto'
+                                        }
+                                    }}
+                                    onClick={scrollToTop}
                                 >
                                         <img src='/assets/icons/Polygon_1.svg'></img>
                                 </Box>
@@ -175,31 +173,32 @@ useEffect(() => {
                             >
                                 <MenuIcon />
                             </IconButton>
-                            <LanguageItem isDark={isDark} />
+                            {/* <LanguageItem isDark={isDark} /> */}
                             
                         </Stack>
                     </Stack>
                 </Container>
 
             </Box>
-            {openMenu && <MenuMobile onClose={() => setOpenMenu(false)} />}
-
-            
-            {/* <Drawer
+            {/* {openMenu && <MenuMobile onClose={() => setOpenMenu(false)} />} */}
+            <Drawer
                 open={openMenu}
                 onClose={() => setOpenMenu(false)}
                 anchor="right"
                 sx={{
                     '.MuiPaper-root': {
                         p: 3,
-                        minWidth: '60vw',
-                        zIndex: 999
+                        width: '50vw',
+                        maxWidth: '200px',
+                        zIndex: 999,
+                        backgroundColor: '#FB471E'
                     }
                 }}
                 
+                
             >
                 <MenuMobile onClose={() => setOpenMenu(false)} />
-            </Drawer> */}
+            </Drawer>
         </Fragment>
     );
 }

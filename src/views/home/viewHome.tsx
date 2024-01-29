@@ -55,7 +55,7 @@ export default function ViewHomePage(props: any) {
                 <OurTeam data={data} />
                 <OurAward/>
                 <OurPartner/>
-                <BlogAndNews/>
+                {/* <BlogAndNews/> */}
             </Stack>
         </Fragment>
     )

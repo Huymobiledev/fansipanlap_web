@@ -15,32 +15,25 @@ export default function MenuMobile(props: any) {
         <Fragment>
             <Stack spacing={2} pt={4}
                 sx={{
-                    position: 'absolute',
-                    zIndex: 1000,
-                    right: 0,
-                    bottom: 0,
                     '.item': {
                         fontSize: 12,
                         fontWeight: 600,
-                        textTransform: 'uppercase',
+                        width: '100%',
+                        justifyContent:'right',
                     }
                 }}
             >
                 {dataMenu.map((item, index) => (
                     <Link href={item?.link} key={index} onClick={onClose}>
-                        <Stack direction={'row'} alignItems={'center'} spacing={3}
+                        <Stack direction={'row'} spacing={3}
                             sx={{
-                                'svg': {
-                                    width: 8,
-                                    height: 8,
-                                    objectFit: 'contain'
-                                },
-                                color: router.pathname === (item.link)? '#22AD01': '#071F06'
+                                color: 'white',
+                                width: '100%',
                             }}
                         >
-                            <BulletIcon/>
-                            <div className="item">{t(item?.lable)}</div>
+                            <div style={{marginLeft: 'auto'}}>{t(item?.lable)}</div>
                         </Stack>
+                        <hr style={{color: 'white', borderWidth: '0.1px', width: '100%', borderStyle: 'solid', opacity: '.3'}}></hr>
                     </Link>
                 ))}
             </Stack>

@@ -67,7 +67,8 @@ useEffect(() => {
                         width: '90vw',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        maxWidth: 'lg'
+                        maxWidth: 'lg',
+                        m: 'auto'
                     }}>
                         {products.map((item, index) => (
                         <Grid key={index} item xs={12} sm={6} md={3} my={2}>

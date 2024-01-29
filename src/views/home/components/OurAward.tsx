@@ -35,7 +35,7 @@ useEffect(() => {
 
                             <Typography 
                                 sx={{
-                                    fontSize: isOnMobile ? '14px' : '16px',
+                                    fontSize: 'calc(14px + .2vw)',
                                     display: 'inline', 
                                     position:'relative',
                                     flex: 1,
@@ -68,7 +68,7 @@ useEffect(() => {
 
                             <Typography 
                                 sx={{
-                                    fontSize: isOnMobile ? '14px' : '16px',
+                                    fontSize: 'calc(14px + .2vw)',
                                     display: 'inline', 
                                     position:'relative',
                                     flex: 1,
@@ -85,24 +85,24 @@ useEffect(() => {
 
     const Award2 = () => {
         return (
-            <Grid item xs={12} md={6} mb={'50px'}>
+            <Grid item xs={12} md={6} mb={2}>
                 <Grid container>
                     <Grid item xs={6}>
                         <img style={{
-                            width: isOnMobile ? '176px' : '300px', 
-                            height: isOnMobile ? '168px' : '300px'}} 
+                            width: '100%'
+                        }} 
                             src='/assets/images/Picture9-very_compressed-scale-4_00x 1.png'/>
                     </Grid>
                     <Grid item xs={3}>
                         <img style={{
-                            width: isOnMobile ? '39px' : '70px', 
-                            height: isOnMobile ? '132px' : '236px'}} 
+                            width: '50%'
+                        }}
                             src='/assets/images/apicta_award_home-89x300 1.png'/>
                     </Grid>
                     <Grid item xs={3}>
                         <img style={{
-                            width: isOnMobile ? '39px' : '70px', 
-                            height: isOnMobile ? '132px' : '236px'}} 
+                            width: '50%'
+                        }}
                             src='/assets/images/apicta_award_home-89x300 1.png'/>
                     </Grid>
                 </Grid>
@@ -155,7 +155,8 @@ useEffect(() => {
                         </Typography>
                         <Typography sx={{
                             fontSize: `calc(${1}vw + 15px)`,
-
+                            m: 'auto',
+                            mb: 2
                         }}>
                             We&apos;ve been building many products with <b>million-user</b> scales
                         </Typography>

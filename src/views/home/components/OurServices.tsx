@@ -69,21 +69,23 @@ React.useEffect(() => {
     setIs4K(window.innerWidth > 2560)
 },[window.innerWidth])
     return (
-        <Container
-            maxWidth={'lg'}
+        <Box
             sx={{
-                width: '75vw',
+                width: '95vw',
                 textAlign: 'center',
                 py: '50px',
-                borderRadius: 3,
-                px: '0'                
+                justifyContent: 'center',
+                alignItems: 'center',
+                maxWidth: '1000px',
+                mx: 'auto',
                 
         }}>
-            <Stack direction={'column'} gap={5} justifyContent={'center'} alignItems={'center'}>
                 <Typography variant="h2" sx={{
-                    width: '50vw',
+                    width: '60%',
                     fontSize: `calc(${2}vw + 28px)`,
                     m: 'auto',
+                    mb: 5,
+                    textAlign: 'center',
                     fontWeight: 700,
                     'span:first-child':{
                         color: '#363636'
@@ -96,67 +98,62 @@ React.useEffect(() => {
                     <span>Our </span>
                     <span>Services</span>
                 </Typography>
-                <Grid container spacing={3} sx={{justifyContent:'space-evenly', alignItems:'center', flexWrap: 'wrap'}}>
-                    {initData.map((item, index) => (
-                        <Grid item xs={12} sm={12} md={4} key={index}
-                            sx={{
-                                textAlign: 'center'
-                            }}
-                        >
-                            <ScrollAnimation animateIn='fadeIn'
-                                animateOut='fadeOut' delay={index * 150} animateOnce={true}>
-                                <Stack direction={'column'} gap={'15vh'}
+                <Grid container>
+                    {initData.map((item, index) => 
+                        <Grid item xs={12} sm={6} md={4} key={index} sx={{mx: 'auto', justifyContent:'center', alignItems:'center'}}>
+                            <Stack direction={'column'} gap={5} sx={{
+                                boxShadow: '0px 5px 5px 0px #0000000D',
+                                maxWidth: '500px',
+                                width: '96%',
+                                mb: 5,
+                                px: 2,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                pb: 2,
+                                borderRadius: '20px',
+                                minHeight: '371px',
+                                mx: 'auto'
+                            }}>
+                                <img src={`/assets/icons/${item.icon}`} style={{objectFit:'cover'}} width='15%'></img>
+                                <Typography variant="body2"
                                     sx={{
-                                        alignItems: 'center',
-                                        boxShadow: '0px 5px 5px 0px #0000000D',
-                                        borderRadius: '20px',
-                                        backgroundColor: '#fff',
-                                        px: '40px',
-                                        pb: '20px',
-                                        width: '90vw',
-                                        maxWidth: '280px',
-                                        m: 'auto',
-                                        height: '100%',
-                                        maxHeight: '566px'
-                                    }}>
-                                    <img src={"/assets/icons/" + item.icon} alt="" style={{ height: '50px'}} />
-                                    <Typography variant="h3"
-                                        sx={{
-                                            fontSize: `calc(${1}vw + 20px)`,
-                                            fontWeight: 700,
-                                            textAlign: 'center',
-                                            verticalAlign: 'top',
-                                            lineHeight: '35px',
-                                            height: '100px',
-                                        }}  
-                                    >
-                                        {item.title}
-                                    </Typography>
-                                    <Typography
-                                        variant="body2"
-                                        sx={{
-                                            width: '100%',
-                                            color: '#343434',
-                                            fontSize: `calc(${.5}vw + 14px)`,
-                                            textAlign: 'center',
-                                            overflow: 'hidden',
-                                            textOverflow: 'ellipsis',
-                                            WebkitBoxOrient: 'vertical',
-                                            WebkitLineClamp: 2,
-                                            lineHeight: 1.5,
-                                        }}
-                                    >
-                                        {item.description}
-                                    </Typography>
-                                    <CustomButton>Learn more</CustomButton>
-                                </Stack>
-                            </ScrollAnimation>
-                        </Grid>
-                    ))}
+                                        font: 'Inter',
+                                        fontSize: 'calc(17px + .15vw)',
+                                        fontWeight: 700,
+                                        lineHeight: '25px',
+                                        letterSpacing: '0em',
+                                        textAlign: 'center'
+                                    }}
+                                >
+                                    {item.title}
+                                </Typography>
+                                <Typography variant="body2"
+                                    sx={{
+                                        font: 'Inter',
+                                        fontSize: 'calc(15px + .11vw)',
+                                        fontWeight: '400',
+                                        lineHeight: '19px',
+                                        letterSpacing: '0em',
+                                        textAlign: 'center',
+                                        display: '-webkit-box',
+                                        WebkitBoxOrient: 'vertical',
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis',
+                                        WebkitLineClamp: 3,
+                                    }}
+                                >
+                                    {item.description}
+                                </Typography>
+                                <CustomButton>
+                                    Learn More
+                                </CustomButton>
+                            </Stack>
+                        </Grid>    
+                    )}
+                    
                 </Grid>
-            </Stack>
                 
-        </Container>
+        </Box>
 
     );
 }

@@ -32,12 +32,11 @@ useEffect(() => {
             backgroundColor: '#fff',
             mb: '20px',
             justifyContent:'center',
-            
         }}>
             <ScrollAnimation animateIn='fadeIn'
                 animateOut='fadeOut' animateOnce={true}>
                 <Typography variant="h2" sx={{
-                    width: '50vw',
+                    width: '60%',
                     fontSize: `calc(${2}vw + 28px)`,
                     fontWeight: 700,
                     mb:2,
@@ -81,11 +80,14 @@ useEffect(() => {
                                 <img src={item} 
                                     key={index}
                                     style={{
-                                        width: isOnMobile ? '150px' : '190px', 
-                                        height: isOnMobile ? '50px' : '80px', 
+                                        minWidth: '150px',
+                                        maxWidth: '190px',
+                                        minHeight: '50px',
+                                        maxHeight: '80px',
                                         objectFit:'contain', 
                                         borderRadius: '10px',
-                                        padding: '5px'
+                                        padding: '5px',
+                                        margin: 'auto'
                                     }}/>                        
                             ))}
                         </Stack>
