@@ -23,7 +23,7 @@ useEffect(() => {
             alignItems: 'center',
             width: isOnMobile ? '100vw' : '75vw',
             justifyContent:'center'
-        }}>
+        }} id='team'>
             <Stack direction={'column'} gap={5}>
                 <ScrollAnimation animateIn='fadeIn'
                     animateOut='fadeOut' animateOnce={true}>

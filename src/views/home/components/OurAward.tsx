@@ -134,6 +134,7 @@ useEffect(() => {
                 display: 'flex',
                 flexDirection: 'column',
                 my: '50px'}}
+                id='awards'
             >
                 <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
                     <Stack direction={'column'} gap={isOnMobile ? 3 : 7}>

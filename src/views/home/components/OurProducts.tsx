@@ -44,7 +44,9 @@ useEffect(() => {
             mb: '50px',
             width: '100vw'
 
-        }}>
+        }}
+            id='product'
+        >
             <ScrollAnimation animateIn='fadeIn'
                 animateOut='fadeOut' animateOnce={true}>
                 <Typography variant="h2" sx={{

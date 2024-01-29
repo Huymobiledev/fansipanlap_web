@@ -33,7 +33,7 @@ useEffect(() => {
             backgroundColor: '#fff',
             mb: '20px',
             
-        }}>
+        }} id='partners'>
             <ScrollAnimation animateIn='fadeIn'
                 animateOut='fadeOut' animateOnce={true}>
                 <Typography variant="h2" sx={{

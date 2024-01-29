@@ -7,27 +7,27 @@ import { useTranslation } from "react-i18next";
 export const dataMenu = [
     {
         lable: 'Product',
-        link: '/'
+        link: '#product'
     },
     {
         lable: 'Services',
-        link: '/'
+        link: '#services'
     },
     {
         lable: 'Team',
-        link: '/'
+        link: '#team'
     },
     {
         lable: 'Awards',
-        link: '/'
+        link: '#awards'
     },
     {
         lable: 'Partners',
-        link: '/'
+        link: '#partners'
     },
     {
         lable: 'Blogs & News',
-        link: '/'
+        link: '#blogandnew'
     }
 
 ]

@@ -80,7 +80,7 @@ React.useEffect(() => {
                 mx: '0'
                 
                 
-        }}>
+        }} id='services'>
             <Stack direction={'column'} gap={5}>
                 <Typography variant="h2" sx={{
                     fontSize: isOnMobile ? '36px' : '48px',

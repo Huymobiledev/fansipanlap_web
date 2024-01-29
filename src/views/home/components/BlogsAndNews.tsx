@@ -61,7 +61,7 @@ useEffect(() => {
 
     const BlogAndNewsPage = () => {
         return (
-            <Grid container justifyContent={'space-between'} alignItems={'center'}>
+            <Grid container justifyContent={'space-between'} alignItems={'center'} id='blogandnews'>
                 {newsTemplate.slice(page, page + 3).map((item, index) => (
                     <Grid key={index} item xs={12} sm={3} m='auto' mb={2}>
                         <Stack key={index} direction={'column'} gap={'8px'}>
