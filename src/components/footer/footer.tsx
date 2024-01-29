@@ -78,7 +78,6 @@ useEffect(() => {
                                 width: '100%',
                                 display: 'flex',
                                 justifyContent: 'left'
-
                             }}>
                             <img
                                 src='/assets/icons/logo.png'

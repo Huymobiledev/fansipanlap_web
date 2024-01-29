@@ -24,21 +24,25 @@ useEffect(() => {
             width: isOnMobile ? '100vw' : '75vw',
             justifyContent:'center'
         }}>
-            <Stack direction={'column'} gap={5}>
+            <Stack direction={'column'} gap={5} justifyContent={'center'} alignItems={'center'}>
                 <ScrollAnimation animateIn='fadeIn'
                     animateOut='fadeOut' animateOnce={true}>
                     <Typography variant="h2" sx={{
-                        fontSize: isOnMobile ? '36px' : '48px',
-                        fontWeight: 600,
+                        width: '50vw',
+                        fontSize: `calc(${2}vw + 28px)`,
+                        mx: 'auto',
+                        fontWeight: 700,
+                            whiteSpace: 'pre-line', // or 'pre-wrap'
+                        wordWrap: 'break-word',
                         'span:first-child':{
                             color: '#363636'
                         },
                         'span:last-child':{
                             color: '#FB471E'
                         }
+                        
                     }}>
                             <span>Our </span>
-                            {isOnMobile && <br/>}
                             <span>Team</span>
 
                     </Typography>

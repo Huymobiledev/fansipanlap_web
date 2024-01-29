@@ -136,30 +136,29 @@ useEffect(() => {
                 my: '50px'}}
             >
                 <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
-                    <Stack direction={'column'} gap={isOnMobile ? 3 : 7}>
+                        <Stack direction={'column'} gap={5}>
                         <Typography variant="h2" sx={{
-                            fontSize: isOnMobile ? '36px' : '48px',
-                            fontWeight: 600,
+                            width: '50vw',
+                            fontSize: `calc(${2}vw + 28px)`,
+                            fontWeight: 700,
                             'span:first-child':{
                                 color: '#363636'
                             },
                             'span:last-child':{
                                 color: '#FB471E'
-                            }
+                            },
+                            mx: 'auto'
+                            
                         }}>
                             <span>Our </span>
-                            {isOnMobile && <br/>}
                             <span>Awards</span>
                         </Typography>
                         <Typography sx={{
-                            fontSize: '40px',
+                            fontSize: `calc(${1}vw + 15px)`,
 
                         }}>
                             We&apos;ve been building many products with <b>million-user</b> scales
                         </Typography>
-                        <Stack direction={isOnMobile ? 'column-reverse' : 'row'} gap={isOnMobile ? 2 : 5}>
-                            
-                        </Stack>
                     </Stack>
                     <Award/>
                     

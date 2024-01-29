@@ -90,7 +90,7 @@ useEffect(() => {
                     width: '100vw',
                     display: 'flex',       // Add display: flex
                     alignItems: 'center', 
-                    height: isOnMobile ? 40 : 50
+                    height: 45
                 }}
             >
                 <Container maxWidth='xxl'

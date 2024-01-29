@@ -21,34 +21,38 @@ export default function OurPartner(props: any) {
     const [isOnMobile, setIsOnMobile] = useState<boolean>(false)
 
 useEffect(() => {
-    setIsOnMobile(window.innerWidth > 770 ? false : true)
-})
+    setIsOnMobile(window.innerWidth < 600)
+}, [window.innerWidth])
 
     return (
         <Container sx={{
             textAlign: 'center',
-            display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             backgroundColor: '#fff',
             mb: '20px',
+            justifyContent:'center',
             
         }}>
             <ScrollAnimation animateIn='fadeIn'
                 animateOut='fadeOut' animateOnce={true}>
                 <Typography variant="h2" sx={{
-                    fontSize: isOnMobile ? '36px' : '48px',
-                    fontWeight: 600,
-                    mb: 2,
+                    width: '50vw',
+                    fontSize: `calc(${2}vw + 28px)`,
+                    fontWeight: 700,
+                    mb:2,
+                    textAlign: 'center',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                     'span:first-child':{
                         color: '#363636'
                     },
                     'span:last-child':{
                         color: '#FB471E'
-                    }
+                    },
+                    mx: 'auto'
                 }}>
                         <span>Our </span>
-                        {isOnMobile && <br/>}
                         <span>Partners</span>
 
                 </Typography>
@@ -77,7 +81,7 @@ useEffect(() => {
                                 <img src={item} 
                                     key={index}
                                     style={{
-                                        width: isOnMobile ? '125px' : '190px', 
+                                        width: isOnMobile ? '150px' : '190px', 
                                         height: isOnMobile ? '50px' : '80px', 
                                         objectFit:'contain', 
                                         borderRadius: '10px',

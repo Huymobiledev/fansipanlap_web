@@ -128,8 +128,10 @@ useEffect(() => {
             <ScrollAnimation animateIn='fadeIn'
                 animateOut='fadeOut' animateOnce={true}>
                 <Typography variant="h2" sx={{
-                    fontSize: isOnMobile ? '36px' : '48px',
-                    fontWeight: 600,
+                    width: '50vw',
+                    fontSize: `calc(${2}vw + 28px)`,
+                    fontWeight: 700,
+                    mx: 'auto',
                     mb: 5,
                     'span:first-child':{
                         color: '#363636'
@@ -137,6 +139,7 @@ useEffect(() => {
                     'span:last-child':{
                         color: '#FB471E'
                     }
+                    
                 }}>
                         <span>Blog & </span>
                         {isOnMobile && <br/>}

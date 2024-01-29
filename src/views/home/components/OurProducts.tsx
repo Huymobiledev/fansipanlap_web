@@ -38,7 +38,6 @@ useEffect(() => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '30px',
             backgroundColor: '#fff',
             justifyContent: 'center',
             mb: '50px',
@@ -48,18 +47,20 @@ useEffect(() => {
             <ScrollAnimation animateIn='fadeIn'
                 animateOut='fadeOut' animateOnce={true}>
                 <Typography variant="h2" sx={{
-                    fontSize: isOnMobile ? '36px' : '48px',
+                    width: '50vw',
+                    fontSize: `calc(${2}vw + 28px)`,
+                    m: 'auto',
+                    mb: 2,
                     fontWeight: 700,
-                    mb: '20px',
                     'span:first-child':{
                         color: '#363636'
                     },
                     'span:last-child':{
                         color: '#FB471E'
                     }
+                    
                 }}>
                     <span>Our </span>
-                    {isOnMobile && <br/>}
                     <span>Product</span>
                 </Typography>
                     <Grid container sx={{

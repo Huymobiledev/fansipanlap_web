@@ -21,7 +21,7 @@ const CustomButton = styled(Button)({
         backgroundColor: '#071F06',
         color: '#FFFFFF',
         borderColor: '#071F06'
-    }
+    },
 
 });
 
@@ -65,7 +65,7 @@ export default function OurServices(props: any) {
     const [is4K, setIs4K] = React.useState<boolean>(false)
 
 React.useEffect(() => {
-    setIsOnMobile(window.innerWidth < 600 ? true : false)
+    setIsOnMobile(window.innerWidth <= 425 ? true : false)
     setIs4K(window.innerWidth > 2560)
 },[window.innerWidth])
     return (
@@ -76,14 +76,14 @@ React.useEffect(() => {
                 textAlign: 'center',
                 py: '50px',
                 borderRadius: 3,
-                px: '0',
-                mx: '0'
-                
+                px: '0'                
                 
         }}>
-            <Stack direction={'column'} gap={5}>
+            <Stack direction={'column'} gap={5} justifyContent={'center'} alignItems={'center'}>
                 <Typography variant="h2" sx={{
-                    fontSize: isOnMobile ? '36px' : '48px',
+                    width: '50vw',
+                    fontSize: `calc(${2}vw + 28px)`,
+                    m: 'auto',
                     fontWeight: 700,
                     'span:first-child':{
                         color: '#363636'
@@ -94,36 +94,40 @@ React.useEffect(() => {
                     
                 }}>
                     <span>Our </span>
-                    {isOnMobile && <br/>}
                     <span>Services</span>
                 </Typography>
-                <Grid container spacing={3} sx={{justifyContent:'center'}}>
+                <Grid container spacing={3} sx={{justifyContent:'space-evenly', alignItems:'center', flexWrap: 'wrap'}}>
                     {initData.map((item, index) => (
-                        <Grid item xs={15} sm={5} md={4} key={index}
+                        <Grid item xs={12} sm={12} md={4} key={index}
                             sx={{
-        
+                                textAlign: 'center'
                             }}
                         >
                             <ScrollAnimation animateIn='fadeIn'
                                 animateOut='fadeOut' delay={index * 150} animateOnce={true}>
-                                <Stack direction={'column'} gap={3}
+                                <Stack direction={'column'} gap={'15vh'}
                                     sx={{
                                         alignItems: 'center',
                                         boxShadow: '0px 5px 5px 0px #0000000D',
                                         borderRadius: '20px',
                                         backgroundColor: '#fff',
-                                        padding: isOnMobile ? '30px' : '50px',
-                                        width: isOnMobile ? '90vw' : 1
+                                        px: '40px',
+                                        pb: '20px',
+                                        width: '90vw',
+                                        maxWidth: '280px',
+                                        m: 'auto',
+                                        height: '100%',
+                                        maxHeight: '566px'
                                     }}>
                                     <img src={"/assets/icons/" + item.icon} alt="" style={{ height: '50px'}} />
                                     <Typography variant="h3"
                                         sx={{
-                                            fontSize: isOnMobile ? '20px' : '24px',
+                                            fontSize: `calc(${1}vw + 20px)`,
                                             fontWeight: 700,
                                             textAlign: 'center',
-                                            height: '58px',
                                             verticalAlign: 'top',
-                                            lineHeight: '25px'
+                                            lineHeight: '35px',
+                                            height: '100px',
                                         }}  
                                     >
                                         {item.title}
@@ -133,15 +137,13 @@ React.useEffect(() => {
                                         sx={{
                                             width: '100%',
                                             color: '#343434',
-                                            fontSize: '16px',
+                                            fontSize: `calc(${.5}vw + 14px)`,
                                             textAlign: 'center',
-                                            display: '-webkit-box',
                                             overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
                                             WebkitBoxOrient: 'vertical',
                                             WebkitLineClamp: 2,
-                                            textOverflow: 'ellipsis',
-                                            lineHeight: '19.36px',
-                                            mb: '30px'
+                                            lineHeight: 1.5,
                                         }}
                                     >
                                         {item.description}
