@@ -65,7 +65,6 @@ export default function Nav(props: any) {
                                         sx={{
                                             fontSize: '14px',
                                             color: '#ffffff',
-                                            
                                             textAlign: 'right',
                                         }}
                                     >
@@ -74,8 +73,6 @@ export default function Nav(props: any) {
                                 </Link>
                             </Box>
                         </div>
-                        
-                        
                     ))
                 }
             </Stack>
