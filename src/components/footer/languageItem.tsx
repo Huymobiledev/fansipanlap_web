@@ -61,6 +61,20 @@ useEffect(() => {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
 
+    const langList = [
+        {
+            code: 'vi',
+            image: '',
+            name: 'VI'
+        },
+        {
+            code: 'en',
+            image: '',
+            name: 'EN'
+        }
+    ]
+
+
     return (
         <Fragment>
             <Stack direction='row' justifyContent='center' alignItems='center' spacing={.5}
@@ -124,7 +138,7 @@ useEffect(() => {
                         minHeight: 100,
                     }}
                 >
-                    {open && appConfig?.languages?.map((item: any, index: any) => (
+                    {open && langList?.map((item: any, index: any) => (
                         <Link key={index}
                             href='#'
                             locale={item.code}
@@ -168,7 +182,7 @@ useEffect(() => {
                                             marginRight: 1.1,
                                         }}
                                     >
-                                        <img src={item.image} alt="" />
+                                        {item?.image && <img src={item.image} alt="" />}
                                     </Box>
                                     <Typography
                                         sx={{

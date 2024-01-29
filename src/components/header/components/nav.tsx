@@ -11,24 +11,24 @@ export const dataMenu = [
     },
     {
         lable: 'Services',
-        link: '/about-us'
+        link: '/'
     },
     {
         lable: 'Team',
-        link: '/services'
+        link: '/'
     },
     {
         lable: 'Awards',
-        link: '/news'
+        link: '/'
     },
     {
         lable: 'Partners',
-        link: '/news'
+        link: '/'
     },
     {
         lable: 'Blogs & News',
-        link: '/news'
-    },
+        link: '/'
+    }
 
 ]
 export default function Nav(props: any) {
@@ -56,7 +56,7 @@ export default function Nav(props: any) {
                                     alignItems: 'center',
                                     transition: 'transform 0.3s ease-in-out',
                                     ':hover': {
-                                                transform: 'scale(1.5)'
+                                                transform: 'scale(1.1)'
                                             },
                                 }}
                             >

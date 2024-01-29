@@ -24,7 +24,7 @@ const CustomButton = styled(Button)({
     textTransform: 'none',
     transition: 'transform 0.3s ease-in-out',
     '&:hover': {
-        transform: 'scale(1.5)',
+        transform: 'scale(1.1)',
         backgroundColor: '#FB471E'
     },
     '& .MuiButton-endIcon': {

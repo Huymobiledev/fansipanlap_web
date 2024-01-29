@@ -48,14 +48,14 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
 	const seoData: { [lang: string]: SeoInterface } = {
 		'en': {
-			title: 'CARBON CREDIT EXCHANGE JOINT STOCK COMPANY',
-			description: 'We pioneer carbon reduction in asean with our internationally accredited web 3.0 carbon trading platform while offering comprehensive technology and equipment solutions to help businesses and their supply chains reduce carbon emissions and trade in the international carbon credit markets. Our streamlined platform simplifies project registration and carbon credit issuance, combined with expert consultation to maximize carbon credit potential and ensure transparent tracking of the buy/sell process, contributing to verifiable sustainability projects and supply chains.',
-			image: 'https://web-dev.carbonasean.net/assets/images/cctpa.png'
+			title: 'Fansipan Labs',
+			description: 'We help to build and operate web3 projects for enterprises',
+			image: 'https://web-dev.carbonasean.net/assets/images/fansipan-labs.png'
 		},
 		'vi': {
-			title: 'CÔNG TY CỔ PHẦN SÀN GIAO DỊCH TÍN CHỈ CARBON ASEAN',
-			description: 'CCTPA tư vấn các giải pháp cụ thể cho các doanh nghiệp, tổ chức, cá nhân cách thức xây dựng dự án tín chỉ carbon',
-			image: 'https://web-dev.carbonasean.net/assets/images/cctpa.png'
+			title: 'Fansipan Labs',
+			description: 'We help to build and operate web3 projects for enterprises',
+			image: 'https://web-dev.carbonasean.net/assets/images/fansipan-labs.png'
 		}
 
 	}
@@ -76,15 +76,15 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 				<meta name="description" content={pageProps?.description || seoData[`${router.locale}` || 'en']?.description} />
 				<meta property="og:title" content={pageProps?.title || seoData[`${router.locale}` || 'en']?.title} />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://app.carbonasean.net" />
+				<meta property="og:url" content="https://app.fansipan-labs.net" />
 				<meta property="og:image" content={pageProps?.image || seoData[`${router.locale}` || 'en']?.image} />
 				<meta property="og:description" content={pageProps?.description || seoData[`${router.locale}` || 'en']?.description} />
 				<meta property="og:image:width" content="1200" />
 				<meta property="og:image:height" content="630" />
 				<meta property="og:image:type" content="image/png" />
-				<meta name="twitter:card" content="CCTPA" />
-				<meta name="twitter:site" content="CCTPA" />
-				<meta name="twitter:creator" content="@CCTPA. LTD." />
+				<meta name="twitter:card" content="FansipanLabs" />
+				<meta name="twitter:site" content="FansipanLabs" />
+				<meta name="twitter:creator" content="@FansipanLabs. LTD." />
 				<meta name="twitter:title" content={pageProps?.title || seoData[`${router.locale}` || 'en']?.title} />
 				<meta name="twitter:description" content={pageProps?.description || seoData[`${router.locale}` || 'en']?.description} />
 				<meta name="twitter:image" content={pageProps?.image || seoData[`${router.locale}` || 'en']?.image} />
