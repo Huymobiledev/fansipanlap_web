@@ -123,7 +123,7 @@ useEffect(() => {
                                         <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M19 8L14.618 11.2103C13.176 12.2632 10.81 12.2632 9.368 11.2103L5 8" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    contact@singsing.net
+                                    contact@fansipanlabs.net
                                 </Typography>
                             </Grid>
                             <Grid item md={.25} xs={12} alignItems={'center'}>
