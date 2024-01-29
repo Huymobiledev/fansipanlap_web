@@ -175,7 +175,7 @@ export default function Header() {
                             >
                                 <MenuIcon />
                             </IconButton>
-                            <LanguageItem isDark={isDark} />
+                            {/* <LanguageItem isDark={isDark} /> */}
 
                         </Stack>
                     </Stack>
