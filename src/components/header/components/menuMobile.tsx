@@ -1,4 +1,4 @@
-import { IconButton, Stack, Typography } from "@mui/material";
+import { IconButton, Stack, Typography, Box, Button } from "@mui/material";
 import { Fragment } from "react";
 import { dataMenu } from "./nav";
 import Link from "next/link";
@@ -13,38 +13,41 @@ export default function MenuMobile(props: any) {
 
     return (
         <Fragment>
-            <Stack spacing={0} pt={4}
+            <Stack spacing={2} pt={4}
                 sx={{
-                    position: 'absolute',
-                    zIndex: 1000,
-                    right: 0,
-                    p: 2,
-                    background: '#FB471E',
-                    top: 40,
-                    width: 250,
-                    bottom: 0,
                     '.item': {
                         fontSize: 12,
                         fontWeight: 600,
-                        lineHeight: '12px',
-                        textTransform: 'uppercase',
-                        color: '#fff',
-                        textAlign: 'right'
+                        width: '100%',
+                        justifyContent:'right',
                     }
                 }}
             >
                 {dataMenu.map((item, index) => (
-                    <Link href={item?.link} key={index} onClick={onClose}>
-                        <Stack direction={'row'} alignItems={'center'} justifyContent={'flex-end'} spacing={2}
+                    <Box key={index} width='100%'>
+                        <Button
+                            id={`${index}`}
+                            onClick={(event) => {
+                                item.link(event)
+                                onClose()
+                            }}
+                            sx={{ml: 'auto', display: 'flex', width: '100%'}}
+                        >
+                            <Typography noWrap
+                            variant="button"
+                            id={`${index}`}
                             sx={{
-                                borderBottom: '1px solid #E5E5E5',
-                                color: router.pathname === (item.link)? '#fff': '#071F06',
-                                py: 3,
+                                fontSize: '14px',
+                                color: '#ffffff',
+                                textTransform: 'none',
+                                marginLeft: 'auto'
                             }}
                         >
-                            <div className="item">{t(item?.lable)}</div>
-                        </Stack>
-                    </Link>
+                            {t(item.lable)}
+                        </Typography>
+                        </Button>
+                        <hr style={{color: 'white', borderWidth: '0.1px', width: '100%', borderStyle: 'solid', opacity: '.3'}}></hr>
+                    </Box>
                 ))}
             </Stack>
         </Fragment>

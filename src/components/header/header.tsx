@@ -38,9 +38,9 @@ export default function Header() {
     const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
 
     const [isOnMobile, setIsOnMobile] = useState<boolean>(false)
-    useEffect(() => {
-        setIsOnMobile(window.innerWidth > 770 ? false : true)
-    })
+useEffect(() => {
+    setIsOnMobile(window.innerWidth > 770 ? false : true)
+})
 
 
 
@@ -73,7 +73,7 @@ export default function Header() {
         return () => window.removeEventListener("resize", checkScroll);
     }, [])
 
- 
+
     if (checkUrl(router.pathname, noHeaderUrl)) {
         return <></>
     }
@@ -87,82 +87,81 @@ export default function Header() {
                     position: 'fixed',
                     zIndex: 1000,
                     top: 0,
-                    width: '100vw',
-                    display: 'flex',       // Add display: flex
-                    alignItems: 'center',
-                    height: isOnMobile ? 40 : 50
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'center', 
+                    height: 45,
+                    pl: 0
                 }}
             >
-                <Container maxWidth='xxl'
-                    sx={{
-                        //px: [1, 1, 2, 2, 2],
-                        //border: '1px solid #333',
+                <Box sx={{
+                    '@media screen and (min-width: 800px)': {
+                        width: '10%',
+                    },
+                }}>
 
-
-                    }}
-                >
-                    <Stack direction='row' justifyContent='space-between' alignItems='right' spacing={1} width='100%'
+                </Box>
+                    <Stack direction='row' justifyContent='space-between' alignItems='right' width='100%'
                         sx={{
                             height: [60, 60, 60, 60, 60],
                             minHeight: [60, 60, 60, 60, 60],
                             color: isDark ? '#000' : '#fff',
-                            width: isOnMobile ? '100%' : '88%'
+                            width: isOnMobile? '100%' : '88%',
+                            pl: 0
                         }}
                     >
-                        <Stack direction='row' alignItems='right' spacing={5} height='100%'>
-                            <Box
-                                sx={{
-                                    ml: isOnMobile ? -3 : 10,
-                                    height: [30],
-                                    minHeight: [30],
-                                    'img': {
-                                        width: '80%',
-                                        height: '100%',
-                                        objectFit: 'contain',
-                                        position: 'relative',
-                                        top: '50%',
-                                    },
-                                    textAlign: 'center',
-                                    justifyItems: 'center',
-                                }}
-
-                            >
-                                <img src={isDark ? '/assets/icons/logo-dark.png' : "/assets/icons/logo.png"} alt='logo' />
-                            </Box>
+                        
+                        <Stack direction='row' alignItems='right' height='100%' sx={{pl: 0}}>
+                                <Box
+                                    sx={{
+                                        height: [30],
+                                        minHeight: [30],
+                                        'img': {
+                                            width: '90%',
+                                            height: '100%',
+                                            objectFit: 'contain',
+                                            position: 'relative',
+                                            top: '50%',
+                                        },
+                                        textAlign: 'center',
+                                        justifyItems: 'left',
+                                        ml: 0
+                                    }}
+                                    
+                                >
+                                    <img src={isDark ? '/assets/icons/logo-dark.png' : "/assets/icons/logo.png"} alt='logo' />
+                                </Box>                            
                         </Stack>
-                        <Stack direction='row' alignItems='center' spacing={[1, 1, 2, 2, 2]} height='100%'
+                        <Stack direction='row' alignItems='center' spacing={[1, 1, 2, 2, 2]} height='100%' 
                             sx={{
-                                mr: isOnMobile ? 0 : 40
                             }}>
-                            {!isOnMobile && <Nav isDark={isDark} />}
-                            <Box
-                                sx={{
-                                    display: isBg ? 'flex' : 'none',
-                                    position: 'fixed',
-                                    background: '#FB471E',
-                                    boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.25)',
-                                    borderRadius: '50%',
-                                    width: 36,
-                                    height: 36,
-                                    textAlign: 'center',
-                                    justifyContent: 'center',
-                                    bottom: 10,
-                                    right: 10,
-                                    ':hover': {
-                                        background: '#fc7353'
-                                    },
-                                    'img': {
-                                        width: 16,
-                                        height: 11,
-                                        m: 'auto'
-                                    }
-
-
-                                }}
-                                onClick={scrollToTop}
-                            >
-                                <img src='/assets/icons/Polygon_1.svg'></img>
-                            </Box>
+                            <Nav isDark={isDark} />
+                                <Box
+                                    sx={{
+                                        display: isBg ? 'flex' : 'none',
+                                        position: 'fixed',
+                                        background: '#FB471E',
+                                        boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.25)',
+                                        borderRadius: '50%',
+                                        width: 36,
+                                        height: 36,
+                                        textAlign: 'center',
+                                        justifyContent: 'center',
+                                        bottom: 10,
+                                        right: 10,
+                                        ':hover': {
+                                            background: '#fc7353'
+                                        },
+                                        'img' : {
+                                            width: 16,
+                                            height: 11,
+                                            m: 'auto'
+                                        }
+                                    }}
+                                    onClick={scrollToTop}
+                                >
+                                        <img src='/assets/icons/Polygon_1.svg'></img>
+                                </Box>
                             <IconButton
                                 sx={{
                                     display: {
@@ -176,30 +175,29 @@ export default function Header() {
                                 <MenuIcon />
                             </IconButton>
                             {/* <LanguageItem isDark={isDark} /> */}
-
                         </Stack>
                     </Stack>
-                </Container>
 
             </Box>
-            {openMenu && <MenuMobile onClose={() => setOpenMenu(false)} />}
-
-
-            {/* <Drawer
+            <Drawer
                 open={openMenu}
                 onClose={() => setOpenMenu(false)}
                 anchor="right"
                 sx={{
                     '.MuiPaper-root': {
                         p: 3,
-                        minWidth: '60vw',
-                        zIndex: 999
+                        px: 1.5,
+                        width: '50vw',
+                        maxWidth: '200px',
+                        zIndex: 999,
+                        backgroundColor: '#FB471E'
                     }
                 }}
                 
+                
             >
                 <MenuMobile onClose={() => setOpenMenu(false)} />
-            </Drawer> */}
+            </Drawer>
         </Fragment>
     );
 }

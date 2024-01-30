@@ -18,54 +18,58 @@ useEffect(() => {
 },[window.innerWidth])
 
     return (
-        <Container sx={{
+        <Box
+        id="Team"
+        sx={{
             textAlign: 'center',
             alignItems: 'center',
-            width: isOnMobile ? '100vw' : '75vw',
+            width: '60%',
             justifyContent:'center'
-        }} id='team'>
-            <Stack direction={'column'} gap={5}>
+        }}>
                 <ScrollAnimation animateIn='fadeIn'
                     animateOut='fadeOut' animateOnce={true}>
-                    <Typography variant="h2" sx={{
-                        fontSize: isOnMobile ? '36px' : '48px',
-                        fontWeight: 600,
+                    <Typography variant="h2"  sx={{
+                        width: '50vw',
+                        fontSize: `calc(${2}vw + 28px)`,
+                        mx: 'auto',
+                        mb: 5,
+                        fontWeight: 700,
+                            whiteSpace: 'pre-line',
+                        wordWrap: 'break-word',
                         'span:first-child':{
                             color: '#363636'
                         },
                         'span:last-child':{
                             color: '#FB471E'
                         }
+                        
                     }}>
                             <span>Our </span>
-                            {isOnMobile && <br/>}
                             <span>Team</span>
 
                     </Typography>
                 </ScrollAnimation>
                 <ScrollAnimation animateIn='fadeIn'
                     animateOut='fadeOut' delay={200} animateOnce={true}>
-                    <Grid container sx={{alignItems: 'center', justifyContent: 'space-between'}}>
+                    <Grid container sx={{alignItems: 'center', justifyContent: 'space-between', m: 'auto'}} maxWidth={'900px'}>
                         {team.map((item, index) => (
                             <Grid key={index} item xs={12} md={5.9} sx={{
                                 alignItems: 'center',
-                                width: isOnMobile ? '90vw' : 1,
+                                width: '90vw',
                                 display: 'flex',
-                                mb: 1
+                                mb: 1,
+                                justifyContent: 'space-evenly',
+                                m: 'auto'
                             }}>
                                 <Box key={index} sx={{
-                                    objectFit: 'contain',
+                                    objectFit: 'cover',
                                 }}>
-                                    <img src={item} style={{width: '100%', borderRadius: isOnMobile ? '10px' : '20px'}}/>
+                                    <img src={item} style={{width: '100%', maxWidth: '450px' ,borderRadius: '15px', right: 0}}/>
                                 </Box>
                             </Grid>
-                            
-                            
                         ))}
                     </Grid>
-                </ScrollAnimation>
-            </Stack>
-            
-        </Container>
+                </ScrollAnimation>            
+        </Box>
     )
 }

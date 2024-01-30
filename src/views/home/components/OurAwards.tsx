@@ -5,7 +5,7 @@ import { ButtonGreen } from "@/components/button";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Typography, Grid } from "@mui/material";
 
-export default function OurAward(props: any) {
+export default function OurAwards(props: any) {
     const { t } = useTranslation()
     const [tab, setTab] = useState(0)
 
@@ -35,7 +35,7 @@ useEffect(() => {
 
                             <Typography 
                                 sx={{
-                                    fontSize: isOnMobile ? '14px' : '16px',
+                                    fontSize: 'calc(14px + .2vw)',
                                     display: 'inline', 
                                     position:'relative',
                                     flex: 1,
@@ -68,7 +68,7 @@ useEffect(() => {
 
                             <Typography 
                                 sx={{
-                                    fontSize: isOnMobile ? '14px' : '16px',
+                                    fontSize: 'calc(14px + .2vw)',
                                     display: 'inline', 
                                     position:'relative',
                                     flex: 1,
@@ -85,24 +85,24 @@ useEffect(() => {
 
     const Award2 = () => {
         return (
-            <Grid item xs={12} md={6} mb={'50px'}>
+            <Grid item xs={12} md={6} mb={2}>
                 <Grid container>
                     <Grid item xs={6}>
                         <img style={{
-                            width: isOnMobile ? '176px' : '300px', 
-                            height: isOnMobile ? '168px' : '300px'}} 
+                            width: '100%'
+                        }} 
                             src='/assets/images/Picture9-very_compressed-scale-4_00x 1.png'/>
                     </Grid>
                     <Grid item xs={3}>
                         <img style={{
-                            width: isOnMobile ? '39px' : '70px', 
-                            height: isOnMobile ? '132px' : '236px'}} 
+                            width: '50%'
+                        }}
                             src='/assets/images/apicta_award_home-89x300 1.png'/>
                     </Grid>
                     <Grid item xs={3}>
                         <img style={{
-                            width: isOnMobile ? '39px' : '70px', 
-                            height: isOnMobile ? '132px' : '236px'}} 
+                            width: '50%'
+                        }}
                             src='/assets/images/apicta_award_home-89x300 1.png'/>
                     </Grid>
                 </Grid>
@@ -128,6 +128,7 @@ useEffect(() => {
     return (
         <Fragment>
             <Container maxWidth='xl'
+                id="Awards" 
                 sx={{
                 textAlign: 'center',
                 alignItems: 'center',
@@ -137,30 +138,30 @@ useEffect(() => {
                 id='awards'
             >
                 <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
-                    <Stack direction={'column'} gap={isOnMobile ? 3 : 7}>
-                        <Typography variant="h2" sx={{
-                            fontSize: isOnMobile ? '36px' : '48px',
-                            fontWeight: 600,
+                        <Stack direction={'column'} gap={5}>
+                        <Typography variant="h2"sx={{
+                            width: '50vw',
+                            fontSize: `calc(${2}vw + 28px)`,
+                            fontWeight: 700,
                             'span:first-child':{
                                 color: '#363636'
                             },
                             'span:last-child':{
                                 color: '#FB471E'
-                            }
+                            },
+                            mx: 'auto'
+                            
                         }}>
                             <span>Our </span>
-                            {isOnMobile && <br/>}
                             <span>Awards</span>
                         </Typography>
                         <Typography sx={{
-                            fontSize: '40px',
-
+                            fontSize: `calc(${1}vw + 15px)`,
+                            m: 'auto',
+                            mb: 2
                         }}>
                             We&apos;ve been building many products with <b>million-user</b> scales
                         </Typography>
-                        <Stack direction={isOnMobile ? 'column-reverse' : 'row'} gap={isOnMobile ? 2 : 5}>
-                            
-                        </Stack>
                     </Stack>
                     <Award/>
                     
