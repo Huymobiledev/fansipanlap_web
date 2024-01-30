@@ -86,7 +86,7 @@ useEffect(() => {
                             m: 'auto',
                             
                             'img':{
-                                width: isOnMobile ? '130%' : '120%',
+                                width: '130%',
                                 display: 'flex'
                             }
                         }}>

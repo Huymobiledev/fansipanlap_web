@@ -41,18 +41,32 @@ useEffect(() => {
     }
 
     return (
-        <Box
+            <Box
                 sx={{
                     width: '100%',
                     color: 'white',
                     backgroundColor: '#FB471E',
                     justifyContent: 'center',
                     // px:  isOnMobile ? 0 : is4K ? 10 : '30px',
-                    pr: 3,
-                    overflowX: 'hidden'
+                    overflowX: 'hidden',
+                    display: 'flex'
                 }}
             >
-                <Grid container spacing={2} 
+                <Stack direction={'row'} sx={{
+                    width: '90%',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    display: 'flex',
+                    m: 'auto'
+                }}>
+                <Box sx={{
+                    '@media screen and (min-width: 800px)': {
+                        width: '10vw',
+                    },
+                }}>
+
+                </Box>
+                <Grid container
                     sx={{
                         alignItems: 'center', 
                         justifyContent: 'space-between',
@@ -232,8 +246,8 @@ useEffect(() => {
                     </Grid>
                     <Grid item xs={12}>
                         <Typography variant="body2" sx={{
-                            textAlign: 'center',
-                            fontSize: 'calc(.1vw + 10px)',
+                            textAlign: {xs: 'left', md: 'center'},
+                            fontSize: 'calc(.1vw + 6px)',
                             mx: 'auto',
                             mb: 5,
                         }}>
@@ -243,6 +257,14 @@ useEffect(() => {
                         </Typography>
                     </Grid>
                 </Grid>
+                </Stack>
+                <Box sx={{
+                        '@media screen and (min-width: 800px)': {
+                            width: '10vw',
+                        },
+                    }}>
+
+                </Box>
             </Box>
     )
 }

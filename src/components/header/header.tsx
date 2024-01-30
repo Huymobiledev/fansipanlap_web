@@ -96,7 +96,7 @@ useEffect(() => {
             >
                 <Box sx={{
                     '@media screen and (min-width: 800px)': {
-                        width: '10%',
+                        width: '10vw',
                     },
                 }}>
 
@@ -106,7 +106,7 @@ useEffect(() => {
                             height: [60, 60, 60, 60, 60],
                             minHeight: [60, 60, 60, 60, 60],
                             color: isDark ? '#000' : '#fff',
-                            width: isOnMobile? '100%' : '88%',
+                            width: '100%',
                             pl: 0
                         }}
                     >
@@ -132,13 +132,14 @@ useEffect(() => {
                                     <img src={isDark ? '/assets/icons/logo-dark.png' : "/assets/icons/logo.png"} alt='logo' />
                                 </Box>                            
                         </Stack>
-                        <Stack direction='row' alignItems='center' spacing={[1, 1, 2, 2, 2]} height='100%' 
+                        <Stack direction='row' alignItems='center'justifyItems={'space-between'} height='100%' 
                             sx={{
+                                mr: 0
                             }}>
                             <Nav isDark={isDark} />
                                 <Box
                                     sx={{
-                                        display: isBg ? 'flex' : 'none',
+                                        display: 'none',
                                         position: 'fixed',
                                         background: '#FB471E',
                                         boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.25)',
@@ -155,8 +156,13 @@ useEffect(() => {
                                         'img' : {
                                             width: 16,
                                             height: 11,
-                                            m: 'auto'
-                                        }
+                                        },
+                                        '@media screen and (min-width: 800px)': {
+                                            display: 'flex'
+                                        },
+                                        mr: 0,
+
+
                                     }}
                                     onClick={scrollToTop}
                                 >
@@ -177,7 +183,13 @@ useEffect(() => {
                             {/* <LanguageItem isDark={isDark} /> */}
                         </Stack>
                     </Stack>
-
+                <Box sx={{
+                    '@media screen and (min-width: 800px)': {
+                        width: '10vw',
+                    },
+                }}>
+                    
+                </Box>
             </Box>
             <Drawer
                 open={openMenu}

@@ -16,7 +16,7 @@ const handleClick = (event: any) => {
                 window.open('https://twitter.com/FansipanLabs', '_blank')
                 break
             default:
-                targettedElement?.scrollIntoView({ behavior: 'smooth',block: 'center'})
+                targettedElement?.scrollIntoView({ behavior: 'smooth', block:'center' ,inline: 'start'})
         }
     }
 
@@ -60,13 +60,16 @@ export default function Nav(props: any) {
         <Fragment>
             <Stack direction='row' alignItems='center' id='a'
                 sx={{
-                    gap: 3,
+                    gap: 1,
                     height: '100%',
                     overflow: 'hidden',
-                    px: 5,
+                    pl: 5,
                     '@media screen and (max-width: 800px)': {
                         display: 'none',
-                    }
+                    },
+                    mr: 0,
+                    justifyItems: 'space-between',
+                    width: '100%'
                 }}
             >
                 {
