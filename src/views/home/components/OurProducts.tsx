@@ -33,7 +33,6 @@ useEffect(() => {
 
     return (
         <Container 
-        id="Product"
         sx={{
             textAlign: 'center',
             position: 'relative',
@@ -46,11 +45,10 @@ useEffect(() => {
             width: '100vw'
 
         }}
-            id='product'
         >
             <ScrollAnimation animateIn='fadeIn'
                 animateOut='fadeOut' animateOnce={true}>
-                <Typography variant="h2"  sx={{
+                <Typography variant="h2" id="Product" sx={{
                     width: '50vw',
                     fontSize: `calc(${2}vw + 28px)`,
                     m: 'auto',

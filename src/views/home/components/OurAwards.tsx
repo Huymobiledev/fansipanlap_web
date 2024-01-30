@@ -128,18 +128,18 @@ useEffect(() => {
     return (
         <Fragment>
             <Container maxWidth='xl'
-                id="Awards" 
                 sx={{
                 textAlign: 'center',
                 alignItems: 'center',
                 display: 'flex',
                 flexDirection: 'column',
                 my: '50px'}}
-                id='awards'
             >
                 <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
-                        <Stack direction={'column'} gap={5}>
-                        <Typography variant="h2"sx={{
+                        <Stack direction={'column'} gap={5} id="Awards"
+>
+                        <Typography variant="h2"  sx={{
+                            
                             width: '50vw',
                             fontSize: `calc(${2}vw + 28px)`,
                             fontWeight: 700,
