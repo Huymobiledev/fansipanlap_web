@@ -49,27 +49,21 @@ useEffect(() => {
                     justifyContent: 'center',
                     // px:  isOnMobile ? 0 : is4K ? 10 : '30px',
                     overflowX: 'hidden',
-                    display: 'flex'
+                    display: 'flex',
+                    alignItems: 'center'
                 }}
             >
-                <Stack direction={'row'} sx={{
-                    width: '90%',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    display: 'flex',
-                    m: 'auto'
-                }}>
                 <Box sx={{
                     '@media screen and (min-width: 800px)': {
                         width: '10vw',
                     },
-                }}>
-
-                </Box>
-                <Grid container
+                }}></Box>
+                <Stack direction={'column'} gap={3}
                     sx={{
                         alignItems: 'center', 
-                        justifyContent: 'space-between',
+                        justifyContent: 'center',
+                        width: '90vw',
+                        display: 'flex',
                         '.line' : {
                             height:  {xs : '1px', md : '90%'},
                             width: {xs : '90vw', md : '1px'},
@@ -77,11 +71,10 @@ useEffect(() => {
                             opacity: .3,
                         }
                         
-                        }} m='auto'>
-                    <Grid item xs={12} md={12}>
+                        }}>
                         <Box 
                             sx = {{
-                                mt: '90px',
+                                mt: 3,
                                 width: '100%',
                                 display: 'flex',
                                 justifyContent: 'left'
@@ -92,10 +85,12 @@ useEffect(() => {
                                 alt='FANSIPAN-LAB'
                             />
                         </Box>
-                    </Grid>
-                    <Grid item xs={12} md={12} my={5}>
+                        <Box>
+
                         <Grid container spacing={2} sx={{
-                    
+                            '@media screen and (min-width: 800px)': {
+                                width: '90vw',
+                    },
                         }}>
                             <Grid item md={2.2} xs={12}>
                                 <Typography variant='body2'
@@ -243,28 +238,24 @@ useEffect(() => {
                                 </Typography>
                             </Grid>
                         </Grid>
-                    </Grid>
-                    <Grid item xs={12}>
+                        </Box>
+
                         <Typography variant="body2" sx={{
                             textAlign: {xs: 'left', md: 'center'},
-                            fontSize: 'calc(.1vw + 6px)',
+                            fontSize: '12px',
+                            fontWeight: 400,
                             mx: 'auto',
                             mb: 5,
+                            maxWidth: '1200px',
+                            width: {xs : '100%', lg: '60%'},
+                            lineHeight: '14.52px'
                         }}>
                             <i>
                             * Disclaimer: The Information Contained In This Website, Including The Historical Average APR, Are Intended For Informational Purposes Only. Some Of The Information May Be Dated And May Not Reflect The Most Current Information Or Interest Rates. Interest Rates Are Based On The Quality Of Individual Projects And Are Subject To Change Due To Market Conditions.
                             </i>
                         </Typography>
-                    </Grid>
-                </Grid>
-                </Stack>
-                <Box sx={{
-                        '@media screen and (min-width: 800px)': {
-                            width: '10vw',
-                        },
-                    }}>
-
-                </Box>
+                    </Stack>
+                        
             </Box>
     )
 }
