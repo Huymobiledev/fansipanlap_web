@@ -18,7 +18,9 @@ useEffect(() => {
 },[window.innerWidth])
 
     return (
-        <Box sx={{
+        <Box
+        id="Team"
+        sx={{
             textAlign: 'center',
             alignItems: 'center',
             width: '60%',
@@ -26,7 +28,7 @@ useEffect(() => {
         }}>
                 <ScrollAnimation animateIn='fadeIn'
                     animateOut='fadeOut' animateOnce={true}>
-                    <Typography variant="h2" sx={{
+                    <Typography variant="h2"  sx={{
                         width: '50vw',
                         fontSize: `calc(${2}vw + 28px)`,
                         mx: 'auto',

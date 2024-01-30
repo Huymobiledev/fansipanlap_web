@@ -25,7 +25,9 @@ useEffect(() => {
 }, [window.innerWidth])
 
     return (
-        <Container sx={{
+        <Container 
+        id="Partners"
+        sx={{
             textAlign: 'center',
             flexDirection: 'column',
             alignItems: 'center',

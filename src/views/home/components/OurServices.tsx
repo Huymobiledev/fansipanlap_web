@@ -70,6 +70,7 @@ React.useEffect(() => {
 },[window.innerWidth])
     return (
         <Box
+            
             sx={{
                 width: '95vw',
                 textAlign: 'center',
@@ -80,7 +81,7 @@ React.useEffect(() => {
                 mx: 'auto',
                 
         }}>
-                <Typography variant="h2" sx={{
+                <Typography variant="h2" id="Services" sx={{
                     width: '60%',
                     fontSize: `calc(${2}vw + 28px)`,
                     m: 'auto',

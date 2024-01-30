@@ -1,40 +1,60 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, Button } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 
+const handleClick = (event: any) => {
+        let index = parseInt(event.target.id)
+        let target = dataMenu[index]
+
+        let targettedElement = document.getElementById(`${target.lable}`)
+        console.log(index)
+
+        switch (index) {
+            case 5:
+                window.open('https://twitter.com/FansipanLabs', '_blank')
+                break
+            default:
+                targettedElement?.scrollIntoView({ behavior: 'smooth',block: 'center'})
+        }
+    }
+
 export const dataMenu = [
     {
         lable: 'Product',
-        link: '/'
+        link: handleClick
     },
     {
         lable: 'Services',
-        link: '/about-us'
+        link: handleClick
     },
     {
         lable: 'Team',
-        link: '/services'
+        link: handleClick
     },
     {
         lable: 'Awards',
-        link: '/news'
+        link: handleClick
     },
     {
         lable: 'Partners',
-        link: '/news'
+        link: handleClick
     },
     {
         lable: 'Blogs & News',
-        link: '/news'
+        link: handleClick
     },
 
 ]
+
+
 export default function Nav(props: any) {
     const {isDark} = props
     const router = useRouter()
     const {t} = useTranslation()
+
+
 
     return (
         <Fragment>
@@ -43,13 +63,17 @@ export default function Nav(props: any) {
                     gap: 3,
                     height: '100%',
                     overflow: 'hidden',
-                    px: 5
+                    px: 5,
+                    '@media screen and (max-width: 800px)': {
+                        display: 'none',
+                    }
                 }}
             >
                 {
                     dataMenu.map((item, index) => (
                         <div key={index}>
                             <Box
+                                
                                 sx={{
                                     height: '100%',
                                     display: 'flex',
@@ -58,19 +82,26 @@ export default function Nav(props: any) {
                                     ':hover': {
                                                 transform: 'scale(1.2)'
                                             },
+                                    
                                 }}
                             >
-                                <Link href={item.link}>
-                                    <Typography noWrap
+                                    <Button
+                                        id={`${index}`}
+                                        onClick={item.link}
+                                    >
+                                        <Typography noWrap
+                                        variant="button"
+                                        id={`${index}`}
                                         sx={{
                                             fontSize: '14px',
                                             color: '#ffffff',
                                             textAlign: 'right',
+                                            textTransform: 'none'
                                         }}
                                     >
                                         {t(item.lable)}
                                     </Typography>
-                                </Link>
+                                    </Button>
                             </Box>
                         </div>
                     ))

@@ -5,7 +5,7 @@ import { ButtonGreen } from "@/components/button";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Typography, Grid } from "@mui/material";
 
-export default function OurAward(props: any) {
+export default function OurAwards(props: any) {
     const { t } = useTranslation()
     const [tab, setTab] = useState(0)
 
@@ -128,6 +128,7 @@ useEffect(() => {
     return (
         <Fragment>
             <Container maxWidth='xl'
+                id="Awards" 
                 sx={{
                 textAlign: 'center',
                 alignItems: 'center',
@@ -137,7 +138,7 @@ useEffect(() => {
             >
                 <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
                         <Stack direction={'column'} gap={5}>
-                        <Typography variant="h2" sx={{
+                        <Typography variant="h2"sx={{
                             width: '50vw',
                             fontSize: `calc(${2}vw + 28px)`,
                             fontWeight: 700,

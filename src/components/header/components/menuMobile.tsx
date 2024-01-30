@@ -1,4 +1,4 @@
-import { IconButton, Stack, Typography } from "@mui/material";
+import { IconButton, Stack, Typography, Box, Button } from "@mui/material";
 import { Fragment } from "react";
 import { dataMenu } from "./nav";
 import Link from "next/link";
@@ -24,17 +24,30 @@ export default function MenuMobile(props: any) {
                 }}
             >
                 {dataMenu.map((item, index) => (
-                    <Link href={item?.link} key={index} onClick={onClose}>
-                        <Stack direction={'row'} spacing={3}
+                    <Box key={index} width='100%'>
+                        <Button
+                            id={`${index}`}
+                            onClick={(event) => {
+                                item.link(event)
+                                onClose()
+                            }}
+                            sx={{ml: 'auto', display: 'flex', width: '100%'}}
+                        >
+                            <Typography noWrap
+                            variant="button"
+                            id={`${index}`}
                             sx={{
-                                color: 'white',
-                                width: '100%',
+                                fontSize: '14px',
+                                color: '#ffffff',
+                                textTransform: 'none',
+                                marginLeft: 'auto'
                             }}
                         >
-                            <div style={{marginLeft: 'auto'}}>{t(item?.lable)}</div>
-                        </Stack>
+                            {t(item.lable)}
+                        </Typography>
+                        </Button>
                         <hr style={{color: 'white', borderWidth: '0.1px', width: '100%', borderStyle: 'solid', opacity: '.3'}}></hr>
-                    </Link>
+                    </Box>
                 ))}
             </Stack>
         </Fragment>

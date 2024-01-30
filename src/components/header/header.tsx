@@ -95,7 +95,7 @@ useEffect(() => {
                 }}
             >
                 <Box sx={{
-                    '@media screen and (min-width: 600px)': {
+                    '@media screen and (min-width: 800px)': {
                         width: '10%',
                     },
                 }}>
@@ -135,7 +135,7 @@ useEffect(() => {
                         <Stack direction='row' alignItems='center' spacing={[1, 1, 2, 2, 2]} height='100%' 
                             sx={{
                             }}>
-                            {!isOnMobile && <Nav isDark={isDark} />}
+                            <Nav isDark={isDark} />
                                 <Box
                                     sx={{
                                         display: isBg ? 'flex' : 'none',
@@ -175,7 +175,6 @@ useEffect(() => {
                                 <MenuIcon />
                             </IconButton>
                             {/* <LanguageItem isDark={isDark} /> */}
-                            
                         </Stack>
                     </Stack>
 
@@ -187,6 +186,7 @@ useEffect(() => {
                 sx={{
                     '.MuiPaper-root': {
                         p: 3,
+                        px: 1.5,
                         width: '50vw',
                         maxWidth: '200px',
                         zIndex: 999,

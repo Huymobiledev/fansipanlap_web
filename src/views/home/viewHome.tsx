@@ -1,7 +1,7 @@
 import { Stack } from "@mui/material";
 import { Fragment, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import OurAward from "./components/OurAward";
+import OurAwards from "./components/OurAwards";
 import Welcome from "./components/Welcome";
 import OurProducts from "./components/OurProducts";
 import Backed from "./components/Backed/Backer";
@@ -53,7 +53,7 @@ export default function ViewHomePage(props: any) {
                 <OurProducts data={data}/>
                 <OurServices data={data}/>
                 <OurTeam data={data} />
-                <OurAward/>
+                <OurAwards/>
                 <OurPartner/>
                 {/* <BlogAndNews/> */}
             </Stack>
