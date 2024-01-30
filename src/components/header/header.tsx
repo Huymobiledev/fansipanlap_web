@@ -156,11 +156,11 @@ useEffect(() => {
                                         'img' : {
                                             width: 16,
                                             height: 11,
+                                            m: 'auto'
                                         },
                                         '@media screen and (min-width: 800px)': {
                                             display: 'flex'
                                         },
-                                        mr: 0,
 
 
                                     }}

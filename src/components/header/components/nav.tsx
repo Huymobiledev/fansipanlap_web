@@ -64,7 +64,7 @@ export default function Nav(props: any) {
                     height: '100%',
                     overflow: 'hidden',
                     pl: 5,
-                    '@media screen and (max-width: 800px)': {
+                    '@media screen and (max-width: 900px)': {
                         display: 'none',
                     },
                     mr: 0,
