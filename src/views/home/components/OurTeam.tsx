@@ -23,7 +23,7 @@ useEffect(() => {
         sx={{
             textAlign: 'center',
             alignItems: 'center',
-            width: '60%',
+            width: '90%',
             justifyContent:'center'
         }}>
                 <ScrollAnimation animateIn='fadeIn'
@@ -55,11 +55,12 @@ useEffect(() => {
                         {team.map((item, index) => (
                             <Grid key={index} item xs={12} md={5.9} sx={{
                                 alignItems: 'center',
-                                width: '90vw',
+                                width: '100%',
                                 display: 'flex',
                                 mb: 1,
                                 justifyContent: 'space-evenly',
-                                m: 'auto'
+                                m: 'auto',
+                                
                             }}>
                                 <Box key={index} sx={{
                                     objectFit: 'cover',
