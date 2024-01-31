@@ -234,7 +234,7 @@ useEffect(() => {
                                 alignItems: 'center',
                                 mt: 3.5
                             }}>
-                                <CustomButton>
+                                <CustomButton onClick={() => {window.open('https://docsend.com/view/xxxxcsr6c42yxscp')}}>
                                     Download portfolio
                                 </CustomButton>
                             </Box>
