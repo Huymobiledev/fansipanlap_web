@@ -54,8 +54,8 @@ useEffect(() => {
                 }}
             >
                 <Box sx={{
-                    '@media screen and (min-width: 800px)': {
-                        width: '10vw',
+                    '@media screen and (min-width: 1200px)': {
+                        width: '40vw',
                     },
                 }}></Box>
                 <Stack direction={'column'} gap={3}
@@ -69,7 +69,8 @@ useEffect(() => {
                             backgroundColor: 'white',
                             opacity: .3,
                             mx: 'auto'
-                        }
+                        },
+                        
                         
                         }}>
                         <Box 
@@ -253,22 +254,19 @@ useEffect(() => {
                             textAlign: {xs: 'left', lg: 'center'},
                             fontSize: '12px',
                             fontWeight: 400,
-                            mx: 'auto',
-                            mb: 5,
+                            mr: {xs: 'auto', lg: 8},
                             maxWidth: '1200px',
                             width: {xs : '100%'},
-                            lineHeight: '14.52px'
+                            lineHeight: '14.52px',
+                            mb: 5,
+                            pr: {md: 'auto', lg : 'none'}
                         }}>
                             <i>
                             * Disclaimer: The Information Contained In This Website, Including The Historical Average APR, Are Intended For Informational Purposes Only. Some Of The Information May Be Dated And May Not Reflect The Most Current Information Or Interest Rates. Interest Rates Are Based On The Quality Of Individual Projects And Are Subject To Change Due To Market Conditions.
                             </i>
                         </Typography>
                     </Stack>
-                <Box sx={{
-                    '@media screen and (min-width: 800px)': {
-                        width: '10vw',
-                    },
-                }}></Box>
+            
             </Box>
     )
 }
