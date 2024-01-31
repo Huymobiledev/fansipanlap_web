@@ -254,7 +254,7 @@ useEffect(() => {
                             textAlign: {xs: 'left', lg: 'center'},
                             fontSize: '12px',
                             fontWeight: 400,
-                            mr: {xs: 'auto', lg: 8},
+                            mr: {xs: 'auto', lg: 10},
                             maxWidth: '1200px',
                             width: {xs : '100%'},
                             lineHeight: '14.52px',

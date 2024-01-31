@@ -139,7 +139,7 @@ useEffect(() => {
                             <Nav isDark={isDark} />
                                 <Box
                                     sx={{
-                                        display: 'none',
+                                        display: isBg ? 'flex' : 'none',
                                         position: 'fixed',
                                         background: '#FB471E',
                                         boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.25)',
@@ -158,9 +158,7 @@ useEffect(() => {
                                             height: 11,
                                             m: 'auto'
                                         },
-                                        '@media screen and (min-width: 800px)': {
-                                            display: 'flex'
-                                        },
+                                        
 
 
                                     }}
