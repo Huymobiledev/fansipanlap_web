@@ -129,7 +129,10 @@ useEffect(() => {
                                     }}
                                     
                                 >
-                                    <img src={isDark ? '/assets/icons/logo-dark.png' : "/assets/icons/logo.png"} alt='logo' />
+                                    <Link href='/'>
+                                        <img src={isDark ? '/assets/icons/logo-dark.png' : "/assets/icons/logo.png"} alt='logo' />
+                                    </Link>
+                                    
                                 </Box>                            
                         </Stack>
                         <Stack direction='row' alignItems='center'justifyItems={'space-between'} height='100%' 

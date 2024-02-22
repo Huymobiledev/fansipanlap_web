@@ -50,7 +50,8 @@ useEffect(() => {
                     justifyContent: 'center',
                     overflowX: 'hidden',
                     display: 'flex',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    pt: 8
                 }}
             >
                 <Box sx={{
