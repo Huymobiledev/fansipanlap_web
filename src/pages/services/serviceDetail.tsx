@@ -15,7 +15,7 @@ const serviceDetail = [
         icon: "Business Contract Handshake Sign.svg"
     },
     {
-        link: 'https://fansipanlabs.com/services/SmartContractDevelopment',
+        link: 'https://fansipanlabs.com/services/SmartContractsDevelopment',
         title: 'Smart Contract Development',
         description: 'Creating and implementing self-executing contracts for public and private blockchain networks is a component of our smart contract development. Our team of blockchain developers creates precise, immutable smart contracts that prevent conflicts in the business environment.',
         icon: "Hierarchy 9.svg"
