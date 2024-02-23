@@ -117,7 +117,7 @@ Security is paramount in the digital realm, and our Smart Contracts Development 
 Partner with Fansipan Labs for Smart Contracts Development services that redefine automation, enhance security, and drive precision and efficiency in your business operations. Together, let&apos;s embark on a journey towards innovation and success in the digital era.
 
         </Box>,
-        thumbnail: "2-SmartContract2.jpg"
+        thumbnail: "2-SmartContract.jpg"
 
     },
     {
