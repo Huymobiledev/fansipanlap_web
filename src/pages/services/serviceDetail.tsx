@@ -60,12 +60,12 @@ const serviceDetail = [
                     Proven Track Record: With a proven track record of successful blockchain implementations across various industries, we have earned a reputation for delivering high-quality solutions that drive tangible business outcomes and competitive advantage.
                     </li>
                     <li>
-                    Unlock the transformative potential of blockchain technology with Fansipan Labs' Blockchain Consulting Services. Partner with us to navigate the complexities, mitigate risks, and unlock new opportunities in the decentralized future.
+                    Unlock the transformative potential of blockchain technology with Fansipan Labs&apos; Blockchain Consulting Services. Partner with us to navigate the complexities, mitigate risks, and unlock new opportunities in the decentralized future.
                     </li>
                 </ul>
                 </Typography>
             </Box>,
-        icon: "Business Contract Handshake Sign.svg"
+        thumbnail: "1-Consulting.jpg"
     },
     {
         link: 'https://fansipanlabs.com/services/SmartContractsDevelopment',
@@ -101,7 +101,7 @@ Security is paramount in the digital realm, and our Smart Contracts Development 
                 </b>
                 <br>
                 </br>
-                Every business is unique, and our Smart Contracts Development services are tailored to meet your specific requirements. Whether you're a startup venturing into decentralized finance or an enterprise seeking to optimize supply chain management, our team collaborates closely with you to develop smart contract solutions that align seamlessly with your business objectives.
+                Every business is unique, and our Smart Contracts Development services are tailored to meet your specific requirements. Whether you&apos;re a startup venturing into decentralized finance or an enterprise seeking to optimize supply chain management, our team collaborates closely with you to develop smart contract solutions that align seamlessly with your business objectives.
             </Typography>
             <Typography mb={2}>
                 <b>
@@ -114,20 +114,21 @@ Security is paramount in the digital realm, and our Smart Contracts Development 
 
 
 
-Partner with Fansipan Labs for Smart Contracts Development services that redefine automation, enhance security, and drive precision and efficiency in your business operations. Together, let's embark on a journey towards innovation and success in the digital era.
+Partner with Fansipan Labs for Smart Contracts Development services that redefine automation, enhance security, and drive precision and efficiency in your business operations. Together, let&apos;s embark on a journey towards innovation and success in the digital era.
 
         </Box>,
-        icon: "Hierarchy 9.svg"
+        thumbnail: "2-SmartContract2.jpg"
 
     },
     {
         link: 'https://fansipanlabs.com/services/CrytopcurrencyWalletExchangeDevelopment',
-        icon: "Crypto Wallet.svg",
+        thumbnail: "3-Currency.png",
         title: 'Crytocurrency Wallet & Exchange Development',
         description: 
         <Box sx={{'p': {}}}>
             <Typography sx={{mb: 2}}>
-            In the fast-paced world of digital finance, secure and user-friendly cryptocurrency wallets and exchanges are essential components for seamless transactions. At Fansipan Labs, we offer bespoke Cryptocurrency Wallet & Exchange Development services designed to empower users and businesses alike in navigating the complexities of the evolving digital landscape.            </Typography>
+            In the fast-paced world of digital finance, secure and user-friendly cryptocurrency wallets and exchanges are essential components for seamless transactions. At Fansipan Labs, we offer bespoke Cryptocurrency Wallet & Exchange Development services designed to empower users and businesses alike in navigating the complexities of the evolving digital landscape.            
+            </Typography>
             <Typography sx={{mb: 2}}>
             <b>Empowering Digital Currency Transactions:</b>
             <br/>
@@ -138,14 +139,15 @@ Partner with Fansipan Labs for Smart Contracts Development services that redefin
                 Tailored Solutions for Every Need:
                 </b>
                 <br/>
-                Recognizing the diverse needs of our clients, we offer tailored solutions that cater to various use cases and requirements. Whether you're a cryptocurrency enthusiast looking for a secure and intuitive wallet interface or a business seeking to launch a robust cryptocurrency exchange platform, our team collaborates closely with you to bring your vision to life.            </Typography>
+                Recognizing the diverse needs of our clients, we offer tailored solutions that cater to various use cases and requirements. Whether you&apos;re a cryptocurrency enthusiast looking for a secure and intuitive wallet interface or a business seeking to launch a robust cryptocurrency exchange platform, our team collaborates closely with you to bring your vision to life.            
+            </Typography>
             <Typography mb={2}>
                 <b>
                 Seamless and Secure Transactions:
                 </b>
                 <br>
                 </br>
-                Security is paramount in the world of digital currencies, and our solutions are engineered with robust security features to safeguard users' assets and data. Through advanced encryption techniques, multi-factor authentication, and rigorous security protocols, we ensure that transactions conducted through our platforms are shielded from potential threats and vulnerabilities.
+                Security is paramount in the world of digital currencies, and our solutions are engineered with robust security features to safeguard users&apos; assets and data. Through advanced encryption techniques, multi-factor authentication, and rigorous security protocols, we ensure that transactions conducted through our platforms are shielded from potential threats and vulnerabilities.
             </Typography>
             <Typography mb={2}>
                 <b>
@@ -163,12 +165,12 @@ Partner with Fansipan Labs for Smart Contracts Development services that redefin
                 </br>
                 User experience is at the forefront of our development process. We prioritize intuitive interfaces, seamless navigation, and responsive design to enhance user engagement and satisfaction, ensuring that interacting with your cryptocurrency wallet or exchange is a smooth and rewarding experience for all users.            
             </Typography>
-            Partner with Fansipan Labs to harness the power of digital currencies through our Cryptocurrency Wallet & Exchange Development services. Together, let's embark on a journey towards revolutionizing digital finance and unlocking new opportunities in the digital economy.
+            Partner with Fansipan Labs to harness the power of digital currencies through our Cryptocurrency Wallet & Exchange Development services. Together, let&apos;s embark on a journey towards revolutionizing digital finance and unlocking new opportunities in the digital economy.
         </Box>,
     },
     {
         link: 'https://fansipanlabs.com/services/DefiDevelopment',
-        icon: "Crypto Encryption Key.svg",
+        thumbnail: "4-Defi.jpg",
         title: 'DeFi Development: Pioneering Decentralized Finance Solutions',
         description: 
         <Box sx={{'p': {}}}>
@@ -209,13 +211,13 @@ Partner with Fansipan Labs for Smart Contracts Development services that redefin
                 </b>
                 <br>
                 </br>
-                Explore the boundless possibilities of decentralized finance with Fansipan Labs as your trusted partner. Together, let's embark on a journey to unlock new opportunities, drive innovation, and shape the future of finance through decentralized solutions that empower and enrich the lives of millions around the globe.
+                Explore the boundless possibilities of decentralized finance with Fansipan Labs as your trusted partner. Together, let&apos;s embark on a journey to unlock new opportunities, drive innovation, and shape the future of finance through decentralized solutions that empower and enrich the lives of millions around the globe.
             </Typography>
         </Box>
     },
     {
         link: 'https://fansipanlabs.com/services/NFTDevelopment',
-        icon: "NFT.svg",
+        thumbnail: "5-NFT.jpg",
         title: 'NFT Development: Unlocking Unique Digital Assets and Ownership',
         description:
         <Box sx={{'p': {}}}>
@@ -258,13 +260,13 @@ Partner with Fansipan Labs for Smart Contracts Development services that redefin
                 </b>
                 <br>
                 </br>
-                Dive into the world of non-fungible tokens with Fansipan Labs as your trusted partner. Together, let's unlock the full potential of NFTs and shape the future of digital ownership and creativity, one unique token at a time.
+                Dive into the world of non-fungible tokens with Fansipan Labs as your trusted partner. Together, let&apos;s unlock the full potential of NFTs and shape the future of digital ownership and creativity, one unique token at a time.
             </Typography>
         </Box>
     },
     {
         link: 'https://fansipanlabs.com/services/dAppDevelopment',
-        icon: "Programming Code.svg",
+        thumbnail: "6-D-App.png",
         title: 'dApp Development: Transforming Vision into Reality',
         description:
         <Box sx={{'p': {}}}>
@@ -276,7 +278,7 @@ Partner with Fansipan Labs for Smart Contracts Development services that redefin
                 Bringing Vision to Life:
                 </b>
             <br/>
-            Our expert team collaborates closely with clients to transform their ideas and concepts into fully functional dApps. Whether you're envisioning a decentralized social network, a blockchain-based marketplace, or a decentralized finance (DeFi) platform, we possess the technical expertise and creative ingenuity to bring your vision to life.
+            Our expert team collaborates closely with clients to transform their ideas and concepts into fully functional dApps. Whether you&apos;re envisioning a decentralized social network, a blockchain-based marketplace, or a decentralized finance (DeFi) platform, we possess the technical expertise and creative ingenuity to bring your vision to life.
             </Typography>
             <Typography mb={2}>
                 <b>
@@ -315,7 +317,7 @@ Partner with Fansipan Labs for Smart Contracts Development services that redefin
                 </b>
                 <br>
                 </br>
-                Transform your vision into reality with Fansipan Labs as your trusted partner in dApp development. Together, let's revolutionize user experiences, drive meaningful engagement, and shape the future of decentralized applications in the digital age.
+                Transform your vision into reality with Fansipan Labs as your trusted partner in dApp development. Together, let&apos;s revolutionize user experiences, drive meaningful engagement, and shape the future of decentralized applications in the digital age.
             </Typography>
         </Box>
     }
@@ -328,7 +330,7 @@ Partner with Fansipan Labs for Smart Contracts Development services that redefin
         <Fragment>
             <Container maxWidth='xl'
                 sx={{
-                    my: 10
+                    my: 7
                 }}
             >
                 <Grid container
@@ -339,12 +341,6 @@ Partner with Fansipan Labs for Smart Contracts Development services that redefin
                 >
                     <Grid item lg={8} xs={12}
                         sx={{
-                            'h2': {
-                                fontSize: 24,
-                                fontWeight: 500,
-                                lineHeight: 1.2,
-                                mt: 0
-                            },
                             '.time': {
                                 fontSize: 14,
                                 fontWeight: 600,
@@ -353,7 +349,16 @@ Partner with Fansipan Labs for Smart Contracts Development services that redefin
                             },
                             
                         }}
-                    >
+                    >  
+                        <Box sx={{
+                            width: '100%', 
+                            display: 'block',
+                            mb: {xs: 2, md: 3, lg: 5},
+                            'img' : {
+                                objectFit: 'cover', width: '100%', height: '100%', borderRadius: '10px'
+                            }}}>
+                        <img src={`/assets/images/${service.thumbnail}`}></img>
+                        </Box>
                         <Box
                             sx={{
                                 width: '100%',
@@ -375,7 +380,7 @@ Partner with Fansipan Labs for Smart Contracts Development services that redefin
                                 
                                 sx={{
                                     fontFamily: 'Montserrat',
-                                    fontSize: '24px',
+                                    fontSize: {xs: '22px', md: '24px'},
                                     fontWeight: 700,
                                     lineHeight: '29px',
                                     letterSpacing: "0em",
