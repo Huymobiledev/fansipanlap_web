@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { AppProps } from 'next/app';
-import { Box, CssBaseline} from '@mui/material';
+import { Box, CssBaseline } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/system'
 
 import '@/styles/globals.css';
@@ -49,13 +49,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 	const seoData: { [lang: string]: SeoInterface } = {
 		'en': {
 			title: 'FANSIPAN LAB',
-			description: 'We pioneer carbon reduction in asean with our internationally accredited web 3.0 carbon trading platform while offering comprehensive technology and equipment solutions to help businesses and their supply chains reduce carbon emissions and trade in the international carbon credit markets. Our streamlined platform simplifies project registration and carbon credit issuance, combined with expert consultation to maximize carbon credit potential and ensure transparent tracking of the buy/sell process, contributing to verifiable sustainability projects and supply chains.',
-			image: 'https://web-dev.carbonasean.net/assets/images/cctpa.png'
+			description: 'We help to build and operate web3 projects for enterprises',
+			image: 'https://www.fansipanlabs.com/assets/images/thumb.png'
 		},
 		'vi': {
 			title: 'FANSIPANLAB',
-description: 'We pioneer carbon reduction in asean with our internationally accredited web 3.0 carbon trading platform while offering comprehensive technology and equipment solutions to help businesses and their supply chains reduce carbon emissions and trade in the international carbon credit markets. Our streamlined platform simplifies project registration and carbon credit issuance, combined with expert consultation to maximize carbon credit potential and ensure transparent tracking of the buy/sell process, contributing to verifiable sustainability projects and supply chains.',
-			image: 'https://web-dev.carbonasean.net/assets/images/cctpa.png'
+			description: 'We help to build and operate web3 projects for enterprises',
+			image: 'https://www.fansipanlabs.com/assets/images/thumb.png'
 		}
 
 	}
@@ -98,27 +98,27 @@ description: 'We pioneer carbon reduction in asean with our internationally accr
 						>
 							<ThemeProvider theme={lightTheme}>
 
-								<CssBaseline/>
+								<CssBaseline />
 								{/* <AppConfigGuard> */}
-									{/* Header */}
-									<Header />
-									<Box
-										sx={{
-											position: 'relative',
-											width: '100%',
-											minHeight: '100vh',
-											display: 'flex',
-											flexDirection: 'column',
-											justifyContent: 'flex-start',
-											alignItems: 'center',
-											mb: 3,
-										}}
-									>
-										<Component {...pageProps} />
-									</Box>
+								{/* Header */}
+								<Header />
+								<Box
+									sx={{
+										position: 'relative',
+										width: '100%',
+										minHeight: '100vh',
+										display: 'flex',
+										flexDirection: 'column',
+										justifyContent: 'flex-start',
+										alignItems: 'center',
+										mb: 3,
+									}}
+								>
+									<Component {...pageProps} />
+								</Box>
 
-									<Footer/>
-								
+								<Footer />
+
 							</ThemeProvider>
 						</SnackbarProvider>
 					</PersistGate>
