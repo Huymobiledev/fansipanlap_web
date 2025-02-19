@@ -25,9 +25,17 @@ export default function OurTeam(props: any) {
             },
             "& #imgTeam": {
               height: "80vh",
-              width: "auto",
+              width: {
+                xs: "100%",
+                md: "auto",
+                lg: "auto",
+              },
               borderRadius: "10px",
-              objectFit: "contain",
+              objectFit: {
+                xs: "cover",
+                md: "cover",
+                lg: "cover",
+              },
             },
           }}
         >

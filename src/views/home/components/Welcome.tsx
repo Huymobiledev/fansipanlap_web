@@ -1,7 +1,7 @@
 "use client"; // Ensures this runs only on the client-side
 
 import { Box, Stack } from "@mui/material";
-import { Fragment, useEffect, useRef } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
@@ -16,7 +16,19 @@ const Welcome = () => {
   const title2 = useRef<HTMLDivElement>(null);
   const titledesc = useRef<HTMLDivElement>(null);
   const btnProfile = useRef<HTMLDivElement>(null);
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    if (index < des.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + des[index]);
+        setIndex((prev) => prev + 1);
+      }, 30); // Điều chỉnh tốc độ hiển thị chữ
+
+      return () => clearTimeout(timeout);
+    }
+  }, [index]);
   useEffect(() => {
     if (
       title1.current === null ||
@@ -137,7 +149,7 @@ const Welcome = () => {
                 md: 3,
                 lg: 4,
               },
-              span: {
+              "& #span_des": {
                 color: "#363636",
                 fontSize: {
                   xs: "14px",
@@ -160,7 +172,19 @@ const Welcome = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             >
-              <span ref={titledesc}>{des}</span>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <span id={"span_des"}>{displayedText}</span>
+                <motion.span
+                  animate={{ opacity: [0, 1, 0] }}
+                  transition={{ repeat: Infinity, duration: 0.8 }}
+                >
+                  |
+                </motion.span>
+              </motion.div>
             </motion.div>
           </Typography>
         </motion.div>
