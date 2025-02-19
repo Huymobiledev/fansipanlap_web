@@ -189,6 +189,9 @@ export default function Header() {
                   md: "none",
                 },
                 color: "inherit",
+                svg:{
+                  color:'black'
+                }
               }}
               onClick={() => setOpenMenu(!openMenu)}
             >
