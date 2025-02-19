@@ -1,62 +1,63 @@
+"use client";
+
 import { Stack } from "@mui/material";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import OurAwards from "./components/OurAwards";
-import Welcome from "./components/Welcome";
-import OurProducts from "./components/OurProducts";
-import Backed from "./components/Backed/Backer";
-import OurPartner from "./components/OurPartner";
-import OurServices from "./components/OurServices";
-import OurTeam from "./components/OurTeam";
-import ScrollAnimation from "react-animate-on-scroll";
 // import { getHomeContentAPI } from "@/api/home";
-import { useRouter } from "next/router";
-import BlogAndNews from "./components/BlogsAndNews";
-
-
-export default function ViewHomePage(props: any) {
-    const { t } = useTranslation()
-    const [data, setData] = useState<any>(null);
-    const router = useRouter()
-    const [pending, setPending] = useState(false);
-    const [error, setError] = useState('');
-
-    const getData = async () => {
-        // if (pending) {
-        //     return
-        // }
-        // try {
-        //     setPending(true);
-
-        //     const result = await getHomeContentAPI();
-        //     if (result.success) {
-        //         setData(result.data);
-        //     } else {
-        //         setError(result?.error?.message)
-        //     }
-        // } catch (err: any) {
-        //     setError(err?.message);
-        // } finally {
-        //     setPending(false);
-        // }
-    }
-
-
-    // useEffect(() => {
-    //     getData()
-    // }, [router.locale])
-
-    return (
-        <Fragment>
-            <Stack direction={'column'} gap={5} width={'100%'} alignItems={'center'} sx={{display: 'flex', position:'relative', backgroundColor: '#fff'}}>
-                <Welcome/>
-                <OurProducts data={data}/>
-                <OurServices data={data}/>
-                <OurTeam data={data} />
-                <OurAwards/>
-                <OurPartner/>
-                {/* <BlogAndNews/> */}
-            </Stack>
-        </Fragment>
-    )
+import Welcome from "./components/Welcome";
+import MissionVision from "./components/Mission_Vision";
+import OurProduct from "./components/Our_Product";
+import OurTeam from "./components/Our_Team";
+import OurAwards from "./components/Our_Award";
+import OurPartner from "./components/Our_Partner";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+function useParallax(value: MotionValue<number>, distance: number) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+}
+const sections = [
+  { Component: Welcome, key: "welcome" },
+  { Component: MissionVision, key: "missionVision" },
+  { Component: OurProduct, key: "ourProduct" },
+  { Component: OurTeam, key: "ourTeam" },
+  { Component: OurAwards, key: "ourAwards" },
+  { Component: OurPartner, key: "ourPartner" },
+];
+export default function ViewHomePage() {
+  const { t } = useTranslation();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 300);
+  return (
+    <Fragment>
+      <Stack
+        direction={"column"}
+        width={"100vw"}
+        alignItems={"center"}
+        sx={{
+          display: "flex",
+          position: "relative",
+          backgroundColor: "#fff",
+        }}
+      >
+        {sections.map(({ Component, key }) => (
+          <motion.div
+            key={key}
+            initial={{ opacity: 0, y: 0, scale: 1 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            viewport={{ once: false, amount: 0.2 }}
+            style={{
+              width: "100%",
+              scrollSnapAlign: "start",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Component />
+          </motion.div>
+        ))}
+      </Stack>
+    </Fragment>
+  );
 }
