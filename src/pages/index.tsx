@@ -1,3 +1,4 @@
+
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { Fragment } from 'react'

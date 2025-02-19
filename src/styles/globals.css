@@ -11,7 +11,11 @@ a {
 * {
     box-sizing: border-box;
 }
-
+.hide-scroll {
+    /* mobile viewport bug fix */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
 .rotateimg180 {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
