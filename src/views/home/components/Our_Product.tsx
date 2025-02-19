@@ -77,7 +77,11 @@ export default function OurProduct(props: any) {
                   mr: "20px",
                   height: "70vh",
                   display: "flex",
-                  alignItems: "flex-start",
+                  alignItems: {
+                    xs: "center",
+                    md: "flex-start",
+                    lg: "flex-start",
+                  },
                   justifyContent: "space-between",
                   flexDirection: "column",
                   backgroundColor: item?.color ?? "",
@@ -88,7 +92,11 @@ export default function OurProduct(props: any) {
                   "&:hover": {
                     transform: "scale(1.01)",
                     img: {
-                      ml: "25%",
+                      ml: {
+                        xs: "0%",
+                        md: "25%",
+                        lg: "25%",
+                      },
                       width: "65%",
                       minWidth: "65%",
                       height: "auto",
@@ -99,7 +107,11 @@ export default function OurProduct(props: any) {
                     },
                   },
                   img: {
-                    ml: "25%",
+                    ml: {
+                      xs: "0%",
+                      md: "25%",
+                      lg: "25%",
+                    },
                     width: {
                       xs: "75%",
                       md: "60%",
