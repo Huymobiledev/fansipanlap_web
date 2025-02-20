@@ -12,7 +12,7 @@ const handleClick = (event: any) => {
 
   switch (index) {
     case 5:
-      window.open("https://twitter.com/FansipanLabs", "_blank");
+      window.open("https://www.linkedin.com/company/fansipan-labs/", "_blank");
       break;
     default:
       targettedElement?.scrollIntoView({
