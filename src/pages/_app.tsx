@@ -43,13 +43,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   const seoData: { [lang: string]: SeoInterface } = {
     en: {
-      title: "FANSIPAN LAB",
-      description: "We help to build and operate web3 projects for enterprises",
+      title: "FANSIPAN LABS",
+      description: "Fansipan Labs is a trusted technology partner specializing in AI, Blockchain, IoT, Software Development and Enterprise Solutions for businesses. We support from the ideation and strategic consulting stages through to implementation and optimization, ensuring each project is well-prepared for sustainable growth.",
       image: "https://www.fansipanlabs.com/assets/images/thumb.png",
     },
     vi: {
-      title: "FANSIPANLAB",
-      description: "We help to build and operate web3 projects for enterprises",
+      title: "FANSIPANLABS",
+      description: "Fansipan Labs is a trusted technology partner specializing in AI, Blockchain, IoT, Software Development and Enterprise Solutions for businesses. We support from the ideation and strategic consulting stages through to implementation and optimization, ensuring each project is well-prepared for sustainable growth.",
       image: "https://www.fansipanlabs.com/assets/images/thumb.png",
     },
   };
