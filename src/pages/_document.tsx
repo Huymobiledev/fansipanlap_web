@@ -7,7 +7,7 @@ export default function Document() {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/assets/icons/favicon.png" sizes="any" />
         
         <link href="assets/js/font.css" rel="stylesheet" />
 
