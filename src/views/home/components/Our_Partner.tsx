@@ -9,11 +9,9 @@ export default function OurPartner(props: any) {
   const partners = [
     "/assets/images/avax-full-avalanche-logo-01 1.png",
     "/assets/images/avax-full-avalanche-logo-01 1-1.png",
-    "/assets/images/avax-full-avalanche-logo-01 1-2.png",
-    "/assets/images/avax-full-avalanche-logo-01 1-3.png",
     "/assets/images/avax-full-avalanche-logo-01 1-4.png",
-    "/assets/images/avax-full-avalanche-logo-01 1-5.png",
-    "/assets/images/avax-full-avalanche-logo-01 1-6.png",
+    '/assets/images/google_cloud.png',
+    '/assets/images/sei.png',
   ];
   const renderViewPartners = () => {
     return (
@@ -361,81 +359,13 @@ export default function OurPartner(props: any) {
                     },
                   }}
                 >
-                  6 Nguyen Luong Bang, District 7, HCMC
+                  15 Nguyen Luong Bang, District 7, HCMC
                 </Typography>
               </Grid>
               <Grid item lg={0.25} xs={12} my={1}>
                 <div className="line"></div>
               </Grid>
-              <Grid item lg={2.2} xs={12} my={1}>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontWeight: 600,
-                    textAlign: "left",
-                    left: 0,
-                    mb: "10px",
-                    fontSize: {
-                      xs: "16px",
-                      md: "18px",
-                      lg: "24px",
-                    },
-                  }}
-                >
-                  Philippines
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    justifyContent: "left",
-                    display: "inline-flex",
-                    gap: "5px",
-                    fontSize: {
-                      xs: "14px",
-                      md: "16px",
-                      lg: "18px",
-                    },
-                  }}
-                >
-                  Manila
-                </Typography>
-              </Grid>
-              <Grid item lg={0.25} xs={12} my={1}>
-                <div className="line"></div>
-              </Grid>
-              <Grid item lg={2.2} xs={12} my={1}>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontWeight: 600,
-                    textAlign: "left",
-                    left: 0,
-                    mb: "10px",
-                    fontSize: {
-                      xs: "16px",
-                      md: "18px",
-                      lg: "24px",
-                    },
-                  }}
-                >
-                  Indonesia
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    justifyContent: "left",
-                    display: "inline-flex",
-                    gap: "5px",
-                    fontSize: {
-                      xs: "14px",
-                      md: "16px",
-                      lg: "18px",
-                    },
-                  }}
-                >
-                  Bali
-                </Typography>
-              </Grid>
+            
             </Grid>
           </Box>
 

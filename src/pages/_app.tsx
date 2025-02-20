@@ -48,7 +48,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       image: "https://www.fansipanlabs.com/assets/images/thumb.png",
     },
     vi: {
-      title: "FANSIPANLABS",
+      title: "FANSIPAN LABS",
       description: "Fansipan Labs is a trusted technology partner specializing in AI, Blockchain, IoT, Software Development and Enterprise Solutions for businesses. We support from the ideation and strategic consulting stages through to implementation and optimization, ensuring each project is well-prepared for sustainable growth.",
       image: "https://www.fansipanlabs.com/assets/images/thumb.png",
     },
@@ -102,8 +102,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="FANSIPAN LAB" />
-        <meta name="twitter:site" content="FANSIPAN LAB" />
+        <meta name="twitter:card" content="FANSIPAN LABS" />
+        <meta name="twitter:site" content="FANSIPAN LABS" />
         <meta
           name="twitter:title"
           content={
