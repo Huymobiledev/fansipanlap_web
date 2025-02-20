@@ -120,8 +120,8 @@ export default function OurPartner(props: any) {
                       },
                       img: {
                         width: {
-                          xs: "30%",
-                          md: "30%",
+                          xs: "40%",
+                          md: "40%",
                           lg: "30%",
                         },
                         transition: "transform 0.3s ease-in-out",
@@ -230,6 +230,7 @@ export default function OurPartner(props: any) {
                 <Typography
                   variant="body2"
                   sx={{
+                   
                     justifyContent: "left",
                     gap: "5px",
                     fontSize: "14px",
@@ -360,7 +361,7 @@ export default function OurPartner(props: any) {
                     },
                   }}
                 >
-                  219 Khanh Hoi, District 4, HCMC
+                  6 Nguyen Luong Bang, District 7, HCMC
                 </Typography>
               </Grid>
               <Grid item lg={0.25} xs={12} my={1}>
