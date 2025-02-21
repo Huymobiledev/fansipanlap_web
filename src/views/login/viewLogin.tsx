@@ -49,13 +49,13 @@ export default function ViewLogin(props: any) {
 
     }
 
-    const BtnShowPass = () => {
-        return (
-            <IconButton onClick={() => setShowPassword(!showPassword)}>
-                {!showPassword ? <EyeOpenIcon /> : <EyeCloseIcon />}
-            </IconButton>
-        )
-    }
+    // const BtnShowPass = () => {
+    //     return (
+    //         <IconButton onClick={() => setShowPassword(!showPassword)}>
+    //             {!showPassword ? <EyeOpenIcon /> : <EyeCloseIcon />}
+    //         </IconButton>
+    //     )
+    // }
 
 
     const handleLogin = async (data: any, e: any) => {
@@ -231,7 +231,7 @@ export default function ViewLogin(props: any) {
                                     }}
                                 >
                                     <div>{t('Password')}:</div>
-                                    <InputBase fullWidth
+                                    {/* <InputBase fullWidth
                                         placeholder={t('Enter your password')}
                                         endAdornment={<BtnShowPass />}
                                         id='password'
@@ -245,7 +245,7 @@ export default function ViewLogin(props: any) {
                                             height: 50,
                                             px: 1.5,
                                         }}
-                                    />
+                                    /> */}
                                     <div className="note">{t(errors?.password?.message || '')}</div>
                                 </Box>
 
