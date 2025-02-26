@@ -50,8 +50,13 @@ export const dataMenu = [
   },
 ];
 
-export default function Nav(props: any) {
-  const { isDark } = props;
+export default function Nav({
+  isWhite,
+  openSolution,
+}: {
+  isWhite: boolean;
+  openSolution: () => void;
+}) {
   const router = useRouter();
   const { t } = useTranslation();
 
@@ -65,9 +70,10 @@ export default function Nav(props: any) {
           gap: 1,
           height: "100%",
           overflow: "hidden",
-          pl: 5,
-          "@media screen and (max-width: 900px)": {
-            display: "none",
+          display: {
+            xs: "none",
+            md: "none",
+            lg: "flex",
           },
           mr: 0,
           justifyItems: "space-between",
@@ -95,8 +101,8 @@ export default function Nav(props: any) {
                   sx={{
                     font: "Poppins",
                     fontSize: "14px",
-                    fontWeight: 600,
-                    color: "#595959",
+                    fontWeight: 700,
+                    color: isWhite ? "#595959" : "white",
                     textAlign: "right",
                     textTransform: "none",
                   }}
@@ -107,6 +113,29 @@ export default function Nav(props: any) {
             </Box>
           </div>
         ))}
+        <Button onClick={openSolution}>
+          <Typography
+            noWrap
+            variant="button"
+            sx={{
+              font: "Poppins",
+              fontSize: "14px",
+              fontWeight: 700,
+              color: isWhite ? "#595959" : "white",
+              textAlign: "right",
+              textTransform: "none",
+              span: {
+                font: "Poppins",
+                fontSize: "14px",
+                fontWeight: 700,
+                color: "#0267FD",
+              },
+            }}
+          >
+            {"Solutions"}
+            <span>▼</span>
+          </Typography>
+        </Button>
       </Stack>
     </Fragment>
   );

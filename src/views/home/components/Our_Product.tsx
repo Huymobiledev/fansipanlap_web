@@ -77,26 +77,17 @@ export default function OurProduct(props: any) {
                   mr: "20px",
                   height: "70vh",
                   display: "flex",
-                  alignItems: {
-                    xs: "center",
-                    md: "flex-start",
-                    lg: "flex-start",
-                  },
+                  alignItems: "center",
                   justifyContent: "space-between",
                   flexDirection: "column",
                   backgroundColor: item?.color ?? "",
                   borderRadius: "10px",
-                  p: "10px",
+                  p: "10px 10px 20px 10px ",
                   overflow: "hidden",
                   transition: "transform 0.3s ease-in-out",
                   "&:hover": {
                     transform: "scale(1.01)",
                     img: {
-                      ml: {
-                        xs: "0%",
-                        md: "25%",
-                        lg: "25%",
-                      },
                       width: "65%",
                       minWidth: "65%",
                       height: "auto",
@@ -107,11 +98,6 @@ export default function OurProduct(props: any) {
                     },
                   },
                   img: {
-                    ml: {
-                      xs: "0%",
-                      md: "25%",
-                      lg: "25%",
-                    },
                     width: {
                       xs: "75%",
                       md: "60%",
@@ -130,20 +116,21 @@ export default function OurProduct(props: any) {
                     transition: "transform 0.3s ease-in-out",
                     fontSize: {
                       xs: "20px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "25px",
+                      lg: "25px",
                     },
-                    fontWeight: 800,
-                    textAlign: {
-                      xs: "center",
-                      md: "left",
-                      lg: "left",
-                    },
+                    fontWeight: 700,
+                    textAlign: 'center',
                     color: "#363636",
                     letterSpacing: 1,
                     textShadow: "2px 2px 4pxrgba(0, 0, 0, 0.2)",
                     whiteSpace: "pre-line",
                     display: "flex",
+                    lineHeight: {
+                      xs: "20px",
+                      md: "23px",
+                      lg: "28px",
+                    },
                     flexDirection: "column",
                     alignItems: "center",
                   },
@@ -169,22 +156,24 @@ export default function OurProduct(props: any) {
             flexDirection: "column",
             backgroundColor: "#0267FD",
             height: "100vh",
-            py: "2vh",
+            py: "5vh",
             alignItems: "flex-start",
-            pl: {
-              xs: "2%",
-              md: "10%",
-              lg: "15%",
-            },
+            px: "2%",
           }}
         >
           <Typography
             sx={{
+              width: "100%",
               font: "Poppins",
               fontSize: {
                 xs: "22px",
                 md: "28px",
                 lg: "32px",
+              },
+              pl: {
+                xs: "2%",
+                md: "10%",
+                lg: "15%",
               },
               fontWeight: 800,
               color: "white",

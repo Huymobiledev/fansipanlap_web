@@ -161,7 +161,7 @@ export default function OurAwards(props: any) {
             flexDirection: "column",
             backgroundColor: "white",
             height: "100vh",
-            py: "2vh",
+            py: "5vh",
             alignItems: "flex-start",
             justifyContent: "space-between",
             px: {

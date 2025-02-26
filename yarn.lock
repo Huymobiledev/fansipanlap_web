@@ -2944,6 +2944,11 @@ react-otp-input@^3.1.1:
   resolved "https://registry.yarnpkg.com/react-otp-input/-/react-otp-input-3.1.1.tgz#910169629812c40a614e6c175cc2c5f36102bb61"
   integrity sha512-bjPavgJ0/Zmf/AYi4onj8FbH93IjeD+e8pWwxIJreDEWsU1ILR5fs8jEJmMGWSBe/yyvPP6X/W6Mk9UkOCkTPw==
 
+react-parallax-tilt@^1.7.284:
+  version "1.7.284"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.284.tgz#a1b6a6d4c49daaab1f6ebd65209ef1984e1ad946"
+  integrity sha512-9Fp5PO/CUeWmHX+VnzfVaMq79XgpDwYD0C+0p9vZTQMG89j8nH0k7wNPgU5+AU/dGZZKufaWIZSUkw972uSF3Q==
+
 react-redux@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-9.1.0.tgz#46a46d4cfed4e534ce5452bb39ba18e1d98a8197"
