@@ -3,12 +3,13 @@ import { Fragment } from "react";
 import { dataMenu } from "./nav";
 import Link from "next/link";
 import { BulletIcon, CloseIcon } from "@/components/icons/icons";
-import router from "next/router";
+import router, { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 
 export default function MenuMobile(props: any) {
   const { onClose } = props;
   const { t } = useTranslation();
+  const router = useRouter();
 
   return (
     <Fragment>
@@ -43,6 +44,7 @@ export default function MenuMobile(props: any) {
                   color: "#ffffff",
                   textTransform: "none",
                   marginLeft: "auto",
+                  fontWeight: "700",
                 }}
               >
                 {t(item.lable)}
@@ -59,6 +61,83 @@ export default function MenuMobile(props: any) {
             ></hr>
           </Box>
         ))}
+        <Box
+          onClick={(event) => {
+            onClose();
+          }}
+          sx={{
+            ml: "auto",
+            display: "flex",
+            width: "100%",
+            flexDirection: "column",
+            alignItems: "flex-end",
+          }}
+        >
+          <Typography
+            noWrap
+            variant="button"
+            sx={{
+              fontSize: "16px",
+              color: "#ffffff",
+              textTransform: "none",
+              marginLeft: "auto",
+              fontWeight: "700",
+            }}
+          >
+            {"Solution"}
+          </Typography>
+          <Button
+            onClick={(event) => {
+              onClose();
+              router.push(`blockchain`);
+
+            }}
+            sx={{ ml: "auto", display: "flex", width: "100%" }}
+          >
+            <Typography
+              noWrap
+              variant="button"
+              sx={{
+                fontSize: "14px",
+                color: "#ffffff",
+                textTransform: "none",
+                marginLeft: "auto",
+                fontWeight: "500",
+              }}
+            >
+              {"Blockchain Solution -"}
+            </Typography>
+          </Button>
+          <Button
+            onClick={(event) => {
+              onClose();
+            }}
+            sx={{ ml: "auto", display: "flex", width: "100%" }}
+          >
+            <Typography
+              noWrap
+              variant="button"
+              sx={{
+                fontSize: "14px",
+                color: "#ffffff",
+                textTransform: "none",
+                marginLeft: "auto",
+                fontWeight: "500",
+              }}
+            >
+              {"Security Solution -"}
+            </Typography>
+          </Button>
+        </Box>
+        <hr
+          style={{
+            color: "white",
+            borderWidth: "0.1px",
+            width: "100%",
+            borderStyle: "solid",
+            opacity: ".3",
+          }}
+        ></hr>
       </Stack>
     </Fragment>
   );

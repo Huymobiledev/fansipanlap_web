@@ -230,6 +230,11 @@ export default function Header({ isWhite }: { isWhite: boolean }) {
             position: "fixed",
             width: "100vw",
             height: "100vh",
+            display:{
+              xs:'none',
+              md:'none',
+              lg:'flex'
+            }
           }}
         >
           <Box
@@ -265,8 +270,8 @@ export default function Header({ isWhite }: { isWhite: boolean }) {
                       "&:hover": {
                         transform: "scale(1.1)",
                       },
-                      fontSize: "14px",
-                      fontWeight: 800,
+                      fontSize: "13px",
+                      fontWeight: 600,
                       cursor: "pointer",
                       textAlign: {
                         xs: "center",
