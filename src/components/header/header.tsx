@@ -5,11 +5,12 @@ import {
   Drawer,
   IconButton,
   Stack,
+  Typography,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Fragment, useEffect, useState } from "react";
 import Nav from "./components/nav";
-import router from "next/router";
+import router, { useRouter } from "next/router";
 import { checkUrl } from "@/utils";
 import Link from "next/link";
 import { useShowMediaUp } from "@/hooks/useResponse";
@@ -32,10 +33,12 @@ const CustomOutlinedButton = styled(Button)({
   },
 });
 
-export default function Header() {
+export default function Header({ isWhite }: { isWhite: boolean }) {
   const [isBg, setIsBg] = useState(false);
+  const [isOpenSolution, setIsOpenSolution] = useState(false);
 
   const [openMenu, setOpenMenu] = useState(false);
+  const router = useRouter();
 
   const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
 
@@ -58,6 +61,7 @@ export default function Header() {
   const isDark = checkUrl(router.pathname, darkUrl);
 
   useEffect(() => {
+    setIsOpenSolution(false);
     function checkScroll() {
       //console.log(window.scrollY)
       if (window.scrollY >= 10) {
@@ -80,25 +84,18 @@ export default function Header() {
     <Fragment>
       <Box
         sx={{
-          background: "white",
           //backdropFilter: 'blur(5px)',
-          position: "absolute",
+          position: "fixed",
           zIndex: 1000,
           top: 0,
           width: "100%",
+          mr: "15px",
           display: "flex",
           alignItems: "center",
           height: 45,
-          pl: 0,
+          px: "20px",
         }}
       >
-        <Box
-          sx={{
-            "@media screen and (min-width: 800px)": {
-              width: "10vw",
-            },
-          }}
-        ></Box>
         <Stack
           direction="row"
           justifyContent="space-between"
@@ -107,7 +104,7 @@ export default function Header() {
           sx={{
             height: [60, 60, 60, 60, 60],
             minHeight: [60, 60, 60, 60, 60],
-            color: isDark ? "#000" : "#fff",
+            color: isWhite ? "#fff" : "#0267FD",
             width: "100%",
             pl: 0,
           }}
@@ -137,9 +134,9 @@ export default function Header() {
               <Link href="/">
                 <img
                   src={
-                    isDark
+                    isWhite
                       ? "/assets/icons/logo-dark.png"
-                      : "/assets/icons/logo.png"
+                      : "/assets/icons/logo_footer.png"
                   }
                   alt="logo"
                 />
@@ -155,7 +152,12 @@ export default function Header() {
               mr: 0,
             }}
           >
-            <Nav isDark={isDark} />
+            <Nav
+              isWhite={isWhite}
+              openSolution={() => {
+                setIsOpenSolution(!isOpenSolution);
+              }}
+            />
             <Box
               sx={{
                 display: isBg ? "flex" : "none",
@@ -185,13 +187,14 @@ export default function Header() {
             <IconButton
               sx={{
                 display: {
-                  xs: "auto",
-                  md: "none",
+                  xs: "flex",
+                  md: "flex",
+                  lg: "none",
                 },
                 color: "inherit",
-                svg:{
-                  color:'black'
-                }
+                svg: {
+                  color: "black",
+                },
               }}
               onClick={() => setOpenMenu(!openMenu)}
             >
@@ -200,13 +203,6 @@ export default function Header() {
             {/* <LanguageItem isDark={isDark} /> */}
           </Stack>
         </Stack>
-        <Box
-          sx={{
-            "@media screen and (min-width: 800px)": {
-              width: "10vw",
-            },
-          }}
-        ></Box>
       </Box>
       <Drawer
         open={openMenu}
@@ -225,6 +221,82 @@ export default function Header() {
       >
         <MenuMobile onClose={() => setOpenMenu(false)} />
       </Drawer>
+      {isOpenSolution && (
+        <Box
+          onClick={() => {
+            setIsOpenSolution(false);
+          }}
+          sx={{
+            position: "fixed",
+            width: "100vw",
+            height: "100vh",
+          }}
+        >
+          <Box
+            sx={{
+              position: "fixed",
+              background: "#FFFFFF",
+              borderRadius: "8px",
+              right: "10px",
+              top: "50px",
+              boxShadow: "0px 4px 4px 0px #00000040",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              py: "20px",
+              px: "20px",
+              gap: "20px",
+              zIndex:'10'
+            }}
+          >
+            {["Blockchain Solution", "Security Solution"].map((item, index) => {
+              return (
+                <>
+                  <Typography
+                    onClick={() => {
+                      if (index == 0) {
+                        router.push(`blockchain`);
+                      }
+                    }}
+                    key={index}
+                    sx={{
+                      font: "Poppins",
+                      transition: "transform 0.3s ease-in-out",
+                      "&:hover": {
+                        transform: "scale(1.1)",
+                      },
+                      fontSize: "14px",
+                      fontWeight: 800,
+                      cursor: "pointer",
+                      textAlign: {
+                        xs: "center",
+                        md: "left",
+                        lg: "left",
+                      },
+                      color: "#595959",
+                      letterSpacing: 2,
+                      textShadow: "2px 2px 4pxrgba(0, 0, 0, 0.2)",
+                      whiteSpace: "pre-line",
+                      lineHeight: 1,
+                    }}
+                  >
+                    {item}
+                  </Typography>
+                  {index == 0 && (
+                    <Box
+                      width={"100%"}
+                      sx={{
+                        height: "1px",
+                        backgroundColor: "#CCCCCC",
+                      }}
+                    />
+                  )}
+                </>
+              );
+            })}
+          </Box>
+        </Box>
+      )}
     </Fragment>
   );
 }

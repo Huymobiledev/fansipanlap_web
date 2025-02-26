@@ -405,6 +405,7 @@ export default function OurPartner(props: any) {
             display: "flex",
             flexDirection: "column",
             backgroundColor: "white",
+            pt: "5vh",
             height: {
               xs: "150vh",
               md: "100vh",

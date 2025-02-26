@@ -44,12 +44,14 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const seoData: { [lang: string]: SeoInterface } = {
     en: {
       title: "FANSIPAN LABS",
-      description: "Fansipan Labs is a trusted technology partner specializing in AI, Blockchain, IoT, Software Development and Enterprise Solutions for businesses. We support from the ideation and strategic consulting stages through to implementation and optimization, ensuring each project is well-prepared for sustainable growth.",
+      description:
+        "Fansipan Labs is a trusted technology partner specializing in AI, Blockchain, IoT, Software Development and Enterprise Solutions for businesses. We support from the ideation and strategic consulting stages through to implementation and optimization, ensuring each project is well-prepared for sustainable growth.",
       image: "https://www.fansipanlabs.com/assets/images/thumb.png",
     },
     vi: {
       title: "FANSIPAN LABS",
-      description: "Fansipan Labs is a trusted technology partner specializing in AI, Blockchain, IoT, Software Development and Enterprise Solutions for businesses. We support from the ideation and strategic consulting stages through to implementation and optimization, ensuring each project is well-prepared for sustainable growth.",
+      description:
+        "Fansipan Labs is a trusted technology partner specializing in AI, Blockchain, IoT, Software Development and Enterprise Solutions for businesses. We support from the ideation and strategic consulting stages through to implementation and optimization, ensuring each project is well-prepared for sustainable growth.",
       image: "https://www.fansipanlabs.com/assets/images/thumb.png",
     },
   };
@@ -145,11 +147,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
                     flexDirection: "column",
                     justifyContent: "flex-start",
                     alignItems: "center",
-                    overflowX: "hidden",
-                    overflowY: "scroll",
-                    scrollSnapType: "y mandatory",
-                    scrollBehavior: "smooth",
-                    transition: "transform 0.3s ease-in-out",
+                    overflow: "hidden",
                   }}
                 >
                   <Component {...pageProps} />

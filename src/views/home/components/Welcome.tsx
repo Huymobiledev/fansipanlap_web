@@ -69,7 +69,7 @@ const Welcome = () => {
         position: "relative",
       }}
     >
-      <Header />
+    
       <Stack
         sx={{
           width: "100vw",

@@ -77,7 +77,7 @@ export default function MissionVision(props: any) {
                 height: "100%",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-around",
+                justifyContent: "center",
                 flexDirection: "column",
                 minHeight: "100%",
                 minWidth: "100%",
@@ -119,7 +119,7 @@ export default function MissionVision(props: any) {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  span: {
+                  "& #span_des": {
                     width: "80%",
                     font: "Inter",
                     fontSize: {
@@ -142,6 +142,7 @@ export default function MissionVision(props: any) {
                   {item?.title ?? ""}
                 </motion.text>
                 <motion.span
+                  id={"span_des"}
                   initial={{ opacity: 0, y: 100 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
@@ -165,7 +166,7 @@ export default function MissionVision(props: any) {
             flexDirection: "column",
             backgroundColor: "#0267FD",
             height: "100vh",
-            py: "2vh",
+            py: "5vh",
             alignItems: "flex-start",
             position: "relative",
             px: {
