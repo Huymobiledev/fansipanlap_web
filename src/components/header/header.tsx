@@ -17,6 +17,7 @@ import { useShowMediaUp } from "@/hooks/useResponse";
 import LanguageItem from "../footer/languageItem";
 import { MenuIcon } from "../icons/icons";
 import MenuMobile from "./components/menuMobile";
+import { redirect } from "next/navigation";
 // import { useSpring, animated } from 'react-spring';
 
 export const noHeaderUrl = ["/login*", "/forget-password*"];

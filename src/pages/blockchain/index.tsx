@@ -9,7 +9,7 @@ export default function BlockChain() {
     return (
         <Fragment>
             <Head>
-                <title>CCTPA - BlockChain</title>
+                <title>CCTPA - BLOCKCHAIN SOLUTION</title>
             </Head>
             <ViewBlockChain/>
         </Fragment>
