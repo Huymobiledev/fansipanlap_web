@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function WelcomeBlockchain() {
+export default function WelcomeBlockchain({onClick}:{onClick:()=>void}) {
   const des = "Welcome to the future of digital interaction!";
 
   const [displayedText, setDisplayedText] = useState("");
@@ -113,6 +113,7 @@ export default function WelcomeBlockchain() {
         transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
       >
         <Box
+        onClick={onClick}
           sx={{
             px: "50px",
             py: "10px",
