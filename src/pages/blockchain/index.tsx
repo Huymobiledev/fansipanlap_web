@@ -9,7 +9,7 @@ export default function BlockChain() {
     return (
         <Fragment>
             <Head>
-                <title>CCTPA - BLOCKCHAIN SOLUTION</title>
+                <title>Fansipan Labs - BLOCKCHAIN SOLUTION</title>
             </Head>
             <ViewBlockChain/>
         </Fragment>

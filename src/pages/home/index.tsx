@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <Fragment>
             <Head>
-                <title>CCTPA - Home</title>
+                <title>Fansipan Labs - Home</title>
             </Head>
             <ViewHomePage/>
         </Fragment>

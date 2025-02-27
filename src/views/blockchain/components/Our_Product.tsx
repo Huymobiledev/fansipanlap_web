@@ -21,16 +21,12 @@ const EcosystemContent: {
   url: string;
 }[] = [
   {
-    img: "/assets/images/bg_game_cow.png",
-    url: "https://t.me/cowtopiabot",
+    img: "/assets/images/bg_game_kara.png",
+    url: "https://t.me/SingSing_TG_bott",
   },
   {
-    img: "/assets/images/bg_game_chick.png",
-    url: "https://t.me/chickizenbot",
-  },
-  {
-    img: "/assets/images/bg_game_card.png",
-    url: "https://t.me/billioncards_bot",
+    img: "/assets/images/bg_ss.png",
+    url: "https://app.singsing.net",
   },
   {
     img: "/assets/images/bg_game_garden.png",
